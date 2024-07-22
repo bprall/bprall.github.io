@@ -22,6 +22,19 @@
     opacity: 0;
 }
 
+.home-card-link {
+    color: white;
+    transition: color 0.5s ease;
+}
+
+.home-card-link:hover {
+    color: rgb(196, 196, 196);
+}
+
+.home-card-link:hover .hover-bar {
+    width: 100%;
+}
+
 .home-card-title {
     margin: 0;
     font-weight: 500;
@@ -90,7 +103,7 @@ input[type=submit]:hover {
 
 .about-card {
     margin-top: 15px;
-    margin-right: 5%;
+    margin-bottom: 100px;
     width: 33%;
     border-top: 2px solid gray;
     cursor: pointer;
@@ -131,5 +144,5 @@ input[type=submit]:hover {
 }
 
 .footer {
-   margin-top: 40px;
+   margin-top: 60px;
 }

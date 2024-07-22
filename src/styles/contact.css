@@ -1,0 +1,148 @@
+.contact {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    max-width: 1200px; 
+    margin: 0 auto; 
+    color: black;
+  }
+  
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  
+  .feedback-form, .contact-info {
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+  }
+  
+  .feedback-form h2 {
+    margin-top: 0;
+    font-size: 1.5em;
+  }
+  
+  .feedback-form p {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+  }
+  
+  .feedback-form input, .feedback-form textarea {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; 
+  }
+  
+  .feedback-form input::placeholder, .feedback-form textarea::placeholder {
+    color: #666;
+  }
+  
+  .feedback-form button {
+    margin-top: 10px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #0073e6;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 1em;
+    width: 75%;
+    margin-left: 12.5%;
+    margin-right: 12.5%;
+  }
+  
+  .feedback-form button:hover {
+    background-color: #aaaaaa;
+    color: black;
+  }
+  
+  .contact-info h4 {
+    margin-top: 0;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 5px;
+  }
+  
+  .contact-info div {
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+  }
+  
+  .contact-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  .contact-icon {
+    vertical-align: middle;
+    margin-right: 15px;
+    width: 30px; 
+    height: 30px;
+  }
+  
+  .contact-text {
+    font-size: 1em;
+  }
+  
+  .contact-info a {
+    text-decoration: none;
+    color: #333;
+  }
+
+  .contact-link {
+    transition: color 0.3s ease;
+  }
+
+  .contact-link:hover {
+    color: #aaaaaa;
+  }
+
+  .social-links {
+    margin-right: 50px; 
+    display: inline-block; 
+    text-decoration: none;
+  }
+
+  .social-links-icons {
+    margin-right: 50px;
+  }
+
+  @media (max-width: 850px) {
+    .grid-container {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto auto;
+    }
+  
+    .contact-info {
+      order: 1; 
+    }
+  
+    .feedback-form {
+      order: 2;
+    }
+  }
+  
+  @media (min-width: 850px) {
+    .grid-container {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto;
+    }
+  
+    .contact-info {
+      order: initial; 
+    }
+  
+    .feedback-form {
+      order: initial; 
+    }
+  }
+  
+

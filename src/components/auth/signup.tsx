@@ -4,6 +4,7 @@ import { setDoc, doc, collection } from "firebase/firestore";
 import { getAuth, createUserWithEmailAndPassword } from 'firebase/auth';
 import { db } from '../../config/firebaseConfig';
 import TopBar from "../top-bar";
+
   export function SignUp() {
     const [firstName, setFirstName] = useState('');
     const [lastName, setLastName] = useState('');

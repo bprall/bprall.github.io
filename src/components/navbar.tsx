@@ -3,14 +3,31 @@ import { Link } from 'react-router-dom';
 import { ChangeIcon } from '../utils/mouseEvents';
 import { useAuth } from './auth/auth';
 import { getAuth, signOut } from 'firebase/auth';
+import { Dropdown } from 'react-bootstrap';
 
-// Function to capitalize the first letter
 function CapitalizeFirst(str: string): string {
   return str.charAt(0).toUpperCase() + str.slice(1);
 }
 
+interface ProjectMaterial {
+  label: string;
+  path: string;
+}
+
+interface Project {
+  id: string;
+  title: string;
+  type: string;
+  titleLink: string;
+  titleLinkLabel: string;
+  description: string;
+  contents?: string;
+  materials?: ProjectMaterial[];
+}
+
 function RenderNavbar() {
   const [cv, setCvLink] = useState('');
+  const [projects, setProjects] = useState<Project[]>([]);
   const auth = useAuth();
 
   useEffect(() => {
@@ -18,18 +35,12 @@ function RenderNavbar() {
       .then(response => response.json())
       .then(data => {
         setCvLink(data.cv);
+        setProjects(data.projects || []);
       })
       .catch(error => {
-        console.error('Error fetching CV link:', error);
+        console.error('Error fetching data:', error);
       });
   }, []);
-
-  const pills = [
-    { title: 'about', link: "/about" },
-    { title: 'projects', link: "/projects" },
-    { title: 'CV', link: cv },
-    { title: 'contact Me', link: "/contact" }
-  ];
 
   const handleLogOut = () => {
     signOut(getAuth());
@@ -55,26 +66,57 @@ function RenderNavbar() {
             <i className="icon icon-bp-logo"></i>
           </Link>
           <ul className="nav nav-pills">
-            {pills.map((pill, index) => (
-              <li key={index} className="nonuser-nav-item nav-item">
-                {pill.title === 'CV' ? (
-                  <a
-                    href={pill.link}
-                    className="nonuser-nav-link nav-link"
-                    onClick={handleCVClick}
-                  >
-                    {CapitalizeFirst(pill.title)}
-                  </a>
-                ) : (
-                  <Link
-                    className="nonuser-nav-link nav-link"
-                    to={pill.link}
-                  >
-                    {CapitalizeFirst(pill.title)}
-                  </Link>
-                )}
-              </li>
-            ))}
+            <li className="nonuser-nav-item nav-item">
+              <Link
+                className="nonuser-nav-link nav-link"
+                to="/about"
+              >
+                {CapitalizeFirst('about')}
+              </Link>
+            </li>
+            <li className="nonuser-nav-item nav-item">
+              <Dropdown className="nonuser-nav-item nav-item">
+                <Dropdown.Toggle variant="link" className="nonuser-nav-link nav-link">
+                  {CapitalizeFirst('projects')}
+                </Dropdown.Toggle>
+                <Dropdown.Menu>
+                  <Dropdown.Item key='projects' as={Link} to="/projects">
+                    {CapitalizeFirst('Projects Page')}
+                  </Dropdown.Item>
+                  <Dropdown.Divider />
+                  {projects.map((project) => (
+                    <Dropdown.Item
+                      key={project.id}
+                      as={Link}
+                      to={`/projects/${project.id}`}
+                    >
+                      {CapitalizeFirst(project.title)}
+                    </Dropdown.Item>
+                  ))}
+                </Dropdown.Menu>
+              </Dropdown>
+            </li>
+            <li className="nonuser-nav-item nav-item">
+              {cv ? (
+                <a
+                  href={cv}
+                  className="nonuser-nav-link nav-link"
+                  onClick={handleCVClick}
+                >
+                  {CapitalizeFirst('CV')}
+                </a>
+              ) : (
+                <span className="nonuser-nav-link nav-link">{CapitalizeFirst('CV')}</span>
+              )}
+            </li>
+            <li className="nonuser-nav-item nav-item">
+              <Link
+                className="nonuser-nav-link nav-link"
+                to="/contact"
+              >
+                {CapitalizeFirst('contact')}
+              </Link>
+            </li>
           </ul>
         </div>
         <div>

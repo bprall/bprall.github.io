@@ -1,5 +1,5 @@
 html,body {
-  background-color: #3a3a3a;
+  background-color: #696969;
   color: white;
   width: 100%;
   margin: 0;
@@ -9,7 +9,7 @@ html,body {
 
 .wrapper {
   overflow-y: auto;
-  background-color: #3a3a3a;
+  background-color: #696969;
   width: 100%;
   margin: 0;
   padding: 0;

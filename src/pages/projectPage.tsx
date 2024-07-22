@@ -1,14 +1,20 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
+interface ProjectMaterial {
+  label: string;
+  path: string;
+}
+
 interface Project {
-    id: string;
-    type: string;
-    title: string;
-    titleLink: string;
-    titleLinkLabel: string;
-    materials?: { path: string }[];
-    contents?: string;
+  id: string;
+  title: string;
+  type: string;
+  titleLink: string;
+  titleLinkLabel: string;
+  description: string;
+  contents?: string;
+  materials?: ProjectMaterial[];
 }
 
 const RenderProjectPage: React.FC = () => {
