@@ -2,28 +2,13 @@ import React, { useState, useEffect, useCallback } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { 
   getRedirectResult, 
-  signInWithEmailAndPassword, 
-  signInWithRedirect, 
-  GoogleAuthProvider,  
+  signInWithEmailAndPassword,   
   AuthError, 
   setPersistence,
   browserSessionPersistence
 } from 'firebase/auth';
 import { auth } from '../../config/firebaseConfig';
 import TopBar from "../top-bar";
-
-function signInWithGoogle() {
-  const provider = new GoogleAuthProvider();
-  return signInWithRedirect(auth, provider);
-}
-
-const handleGoogleSignIn = async () => {
-  try {
-    await signInWithGoogle();
-  } catch (error) {
-    console.error('Google sign-in error:', error.message);
-  }
-};
 
 function RenderLogin() {
   const [email, setEmail] = useState('');

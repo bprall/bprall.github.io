@@ -66,7 +66,7 @@ const RenderProjectPage: React.FC = () => {
     if (project.type === "pdf") {
         return (
             <main>
-                <section className="project">
+                <section className="project" id="pdf">
                     <h3>
                         {project.title}
                         <a href={project.titleLink}>
@@ -84,7 +84,7 @@ const RenderProjectPage: React.FC = () => {
     } else if (project.type === "text") {
         return (
             <main>
-                <section className="project" id="emulate">
+                <section className="project" id="text">
                     <h3>
                         {project.title}
                         <a href={project.titleLink}>
