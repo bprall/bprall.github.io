@@ -1,0 +1,36 @@
+.icon-linkedin-logo {
+    background-image: url('../assets/linkedin-icon.png')
+}
+
+.icon-linkedin-reverse {
+    background-image: url('../assets/linkedin-reverse.png');
+}
+
+.icon-github-logo {
+    background-image: url('../assets/github-icon.png');
+}
+
+.icon-github-reverse {
+    background-image: url('../assets/github-reverse.png');
+}
+
+.icon-bp-logo {
+    background-image: url('../assets/bp-logo.png');
+  }
+  
+.icon-bp-bw {
+    background-image: url('../assets/bp-bw.png');
+}
+
+.icon-bp-bb {
+    background-image: url('../assets/bp-bb.png');
+}
+
+.icon {
+    width: 40px; 
+    height: 40px; 
+    margin-top: 10px;
+    display: inline-block;
+    background-size: contain;
+    background-repeat: no-repeat;
+}

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import '../styles/projectPage.css';
 
 interface ProjectMaterial {
   label: string;
@@ -44,7 +45,6 @@ const RenderProjectPage: React.FC = () => {
             fetchProjectData();
         }
     }, [id]);
-
     if (loading) {
         return (
             <main>
@@ -52,7 +52,6 @@ const RenderProjectPage: React.FC = () => {
             </main>
         );
     }
-
     if (error) {
         return (
             <main>
@@ -60,7 +59,6 @@ const RenderProjectPage: React.FC = () => {
             </main>
         );
     }
-
     if (!project) {
         return (
             <main>
@@ -68,7 +66,6 @@ const RenderProjectPage: React.FC = () => {
             </main>
         );
     }
-
     if (project.type === "pdf") {
         return (
             <main>

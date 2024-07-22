@@ -15,7 +15,6 @@
   .feedback-form, .contact-info {
     padding: 20px;
     border: 1px solid #ddd;
-    border-radius: 8px;
     background-color: #f9f9f9;
   }
   
@@ -128,21 +127,19 @@
     .feedback-form {
       order: 2;
     }
-  }
+}
   
-  @media (min-width: 850px) {
+@media (min-width: 850px) {
     .grid-container {
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: auto;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
     }
-  
-    .contact-info {
-      order: initial; 
-    }
-  
-    .feedback-form {
-      order: initial; 
-    }
-  }
-  
 
+    .contact-info {
+        order: initial; 
+    }
+
+    .feedback-form {
+        order: initial; 
+    }
+}

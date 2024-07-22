@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import data from '../../data.json';
 import { ChangeIcon } from '../utils/mouseEvents';
+import '../styles/contact.css';
 
 const about = data.about;
 
@@ -12,7 +13,7 @@ const RenderContact: React.FC = () => {
         <div className="feedback-form">
           <h2>Feedback Form</h2>
           <p>Let me know what you think of the site or give suggestions by filling out the form below:</p>
-          <form action="mailto:your-email@example.com" method="post" encType="text/plain">
+          <form action="mailto:brprall3@gmail.com.com" method="post" encType="text/plain">
             <input type="text" id="name" name="name" placeholder="Your Full Name" required />
             <input type="email" id="email" name="email" placeholder="Your Email" required />
             <textarea id="feedback" name="feedback" rows={4} placeholder="Your Feedback" required></textarea>
@@ -23,7 +24,7 @@ const RenderContact: React.FC = () => {
         <div className="contact-info">
           <div id="location"> 
             <h4>Location</h4>       
-            <p className="contact-text">&nbsp;&nbsp;{about.address}</p>
+            <p className="contact-text">{about.address}</p>
           </div>
           <div id="contact-details">
             <h4>Contact Details</h4>

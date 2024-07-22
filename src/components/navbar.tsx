@@ -4,25 +4,10 @@ import { ChangeIcon } from '../utils/mouseEvents';
 import { useAuth } from './auth/auth';
 import { getAuth, signOut } from 'firebase/auth';
 import { Dropdown } from 'react-bootstrap';
+import Project from '../utils/projectInterface';
 
 function CapitalizeFirst(str: string): string {
   return str.charAt(0).toUpperCase() + str.slice(1);
-}
-
-interface ProjectMaterial {
-  label: string;
-  path: string;
-}
-
-interface Project {
-  id: string;
-  title: string;
-  type: string;
-  titleLink: string;
-  titleLinkLabel: string;
-  description: string;
-  contents?: string;
-  materials?: ProjectMaterial[];
 }
 
 function RenderNavbar() {

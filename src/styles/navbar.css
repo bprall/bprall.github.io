@@ -42,24 +42,3 @@
 .nav-login:hover .login-arrow {
     margin-right: 10px;
 }
-
-.icon-bp-logo {
-    background-image: url('../assets/bp-logo.png');
-  }
-  
-.icon-bp-bw {
-    background-image: url('../assets/bp-bw.png');
-}
-
-.icon-bp-bb {
-    background-image: url('../assets/bp-bb.png');
-}
-  
-.icon {
-    width: 40px; 
-    height: 40px; 
-    margin-top: 10px;
-    display: inline-block;
-    background-size: contain;
-    background-repeat: no-repeat;
-}

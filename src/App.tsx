@@ -7,7 +7,6 @@ import RenderNavbar from "./components/navbar";
 import RenderAbout from "./pages/about";
 import RenderContact from "./pages/contact";
 import RenderProjects from "./pages/projects";
-import RenderPortfolio from "./pages/portfolio";
 import RenderFrontPage from "./pages/frontPage";
 import RenderSourceCode from "./pages/sourceCode";
 import RenderSignupPending from "./pages/signupPending";
@@ -52,7 +51,6 @@ function App() {
         <Route path="/signup-pending" element={<RenderSignupPending />} />
         <Route path="/contact" element={<Layout><RenderContact /></Layout>} />
         <Route path="/projects" element={<Layout><RenderProjects /></Layout>} />
-        <Route path="/portfolio" element={<Layout><RenderPortfolio /></Layout>} />
         <Route path="/projects/:id" element={<Layout><RenderProjectPage /></Layout>} />
         <Route path="/source-code" element={<ProtectedRoute element={<RenderSourceCode />} />} />
       </Routes>
