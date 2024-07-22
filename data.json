@@ -1,5 +1,9 @@
 {
     "cv": "https://cdn.glitch.global/3874a658-483f-41ac-b439-3b48eab1370f/blakeprall_long.pdf?v=1721344626022",
+    "frontPage" :{
+        "description": "I created a personal website using TypeScript and React Vite as a way to showcase my skills and experiences in web development. Previously, I had a different site, but it wasn't generating much response or interest. With this new version, I aimed to create a more dynamic and engaging platform. The site features a clean and modern design, with a focus on performance and usability. By leveraging TypeScript, I ensured that the code is robust and maintainable, while React Vite provided a fast and efficient development environment. These technologies were chosen to demonstrate my proficiency in modern web development practices and my commitment to delivering high-quality, performant web applications. Visitors can explore my projects, read about my professional journey, and learn more about my technical expertise. Additionally, I've included a form that allows users to request the source code for the site. This not only encourages engagement but also provides an opportunity for potential employers or collaborators to delve deeper into my coding practices and see firsthand the quality of my work. Feel free to visit my website and take a look around. I'm confident that this new approach will better convey my capabilities and attract more interest from those seeking a skilled and passionate web developer.",
+        "plans": "In the future, I plan to host my personal website locally using a Linux server. This approach will give me more control over the environment and the opportunity to fine-tune performance and security settings. I am considering several hosting frameworks, including Nginx for its high performance and stability, Apache for its versatility and robust feature set, and Docker for containerization, which would allow for easy deployment and scalability. These tools will enable me to maintain a highly efficient and reliable website, showcasing not only my development skills but also my ability to manage and optimize a web server. By hosting locally, I aim to provide a seamless and professional experience for visitors, further demonstrating my technical expertise and commitment to quality."
+    },
     "about": {
       "photo": "https://cdn.glitch.global/b0561b3a-67fa-44de-99d8-728d82b14013/1701894420208%20(2).jpg?v=1715368201737",
       "name": "Blake Prall",
@@ -81,7 +85,7 @@
     ],
     "projects": [
       {
-       "id": "budgeting-app",
+        "id": "budgeting-app",
         "title": "Full Stack Budgeting App",
         "type": "text",
         "titleLink": "https://github.com/leddyd/BudgetApp",

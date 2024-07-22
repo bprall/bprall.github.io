@@ -10,6 +10,7 @@ import RenderProjects from "./pages/projects";
 import RenderPortfolio from "./pages/portfolio";
 import RenderFrontPage from "./pages/frontPage";
 import RenderSourceCode from "./pages/sourceCode";
+import RenderSignupPending from "./pages/signupPending";
 import RenderProjectPage from "./pages/projectPage";
 import RenderLogin from "./components/auth/login";
 import RenderSignUp from "./components/auth/signup";
@@ -18,6 +19,16 @@ import { RequireAuth } from "./components/auth/requireAuth";
 import { ReactNode } from "react";
 
 firebase.initializeApp(firebaseConfig);
+
+const Layout: React.FC<{ children: ReactNode }> = ({ children }) => {
+  return (
+    <div className="wrapper">
+      <RenderAlert />
+      <RenderNavbar />
+      {children}
+    </div>
+  );
+};
 
 function ProtectedRoute({ element }: { element: ReactNode }) {
   return (
@@ -34,23 +45,15 @@ function App() {
   return (
     <AuthProvider>
       <Routes>
-        <Route
-          path="/"
-          element={
-            <div className="wrapper">
-              <RenderAlert />
-              <RenderNavbar />
-              <RenderFrontPage />
-            </div>
-          }
-        />
-        <Route path="/about" element={<RenderAbout />} />
+        <Route path="/" element={<Layout><RenderFrontPage /></Layout>} />
+        <Route path="/about" element={<Layout><RenderAbout /></Layout>} />
         <Route path="/login" element={<RenderLogin />} />
         <Route path="/signup" element={<RenderSignUp />} />
-        <Route path="/contact" element={<RenderContact />} />
-        <Route path="/projects" element={<RenderProjects />} />
-        <Route path="/portfolio" element={<RenderPortfolio />} />
-        <Route path="/projects/:id" element={<RenderProjectPage />} />
+        <Route path="/signup-pending" element={<RenderSignupPending />} />
+        <Route path="/contact" element={<Layout><RenderContact /></Layout>} />
+        <Route path="/projects" element={<Layout><RenderProjects /></Layout>} />
+        <Route path="/portfolio" element={<Layout><RenderPortfolio /></Layout>} />
+        <Route path="/projects/:id" element={<Layout><RenderProjectPage /></Layout>} />
         <Route path="/source-code" element={<ProtectedRoute element={<RenderSourceCode />} />} />
       </Routes>
     </AuthProvider>

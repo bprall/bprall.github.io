@@ -91,7 +91,9 @@ const RenderProjectPage: React.FC = () => {
                             <u>{project.titleLinkLabel}</u>
                         </a>
                     </h3>
-                    <p>{project.contents}</p>
+                    <div
+                        dangerouslySetInnerHTML={{ __html: project.contents || '' }}
+                    />
                 </section>
             </main>
         );

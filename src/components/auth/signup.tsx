@@ -1,12 +1,9 @@
 import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { setDoc, doc, collection } from "firebase/firestore"; 
-import { getAuth, 
-  createUserWithEmailAndPassword, 
-  signInWithPopup, 
-  GoogleAuthProvider, } from 'firebase/auth';
-import { db } from '../../config/firebaseConfig.ts';
-
+import { getAuth, createUserWithEmailAndPassword } from 'firebase/auth';
+import { db } from '../../config/firebaseConfig';
+import TopBar from "../top-bar";
   export function SignUp() {
     const [firstName, setFirstName] = useState('');
     const [lastName, setLastName] = useState('');
@@ -56,9 +53,8 @@ import { db } from '../../config/firebaseConfig.ts';
       try {
         const userCredential = await createUserWithEmailAndPassword(auth, email, password);
         const user = userCredential.user;
-  
+    
         const userCollectionRef = collection(db, `users/${user.uid}/info`);
-
         const infoDocRef = doc(userCollectionRef, 'userInfo');
     
         await setDoc(infoDocRef, {
@@ -66,49 +62,15 @@ import { db } from '../../config/firebaseConfig.ts';
           firstName: firstName,
           lastName: lastName,
           email: user.email,
+          status: 'pending', 
         });
-
-        navigate('/expenses', { replace: true });
-  
+    
+        navigate('/signup-pending', { replace: true });
+    
         console.log("Document written with ID: info");
-
+    
       } catch (error) {
         console.error('Registration error:', error.message);
-        setError(error.message.replace('Firebase:', '').trim());
-      }
-    };
-  
-    const handleGoogleSignUp = async () => {
-      const provider = new GoogleAuthProvider();
-      try {
-        const result = await signInWithPopup(auth, provider);
-        const user = result.user;
-
-        let firstName = '';
-        let lastName = '';
-
-        if (user.displayName && user.displayName.includes(' ')) {
-          [firstName, lastName] = user.displayName.split(' ');
-        } else {
-          firstName = user.displayName || '';
-        }
-  
-        const userCollectionRef = collection(db, `users/${user.uid}/info`);
-
-        const infoDocRef = doc(userCollectionRef, 'userInfo');
-    
-        await setDoc(infoDocRef, {
-          uid: user.uid,
-          firstName: firstName,
-          lastName: lastName,
-          email: user.email,
-        });
-  
-        console.log("Document written with ID: info");
-  
-        navigate('/profile', { replace: true });
-      } catch (error) {
-        console.error('Google sign-up error:', error.message);
         setError(error.message.replace('Firebase:', '').trim());
       }
     };
@@ -143,10 +105,6 @@ import { db } from '../../config/firebaseConfig.ts';
         {error && <p style={{ color: 'red' }}>{error}</p>}
         {error ? null : <br />}
         <input type="submit" value="Sign Up" />
-        <button type="button" className="google-btn" onClick={handleGoogleSignUp}>
-          <img className="google-icon" src="https://cdn1.iconfinder.com/data/icons/google-s-logo/150/Google_Icons-09-512.png" alt="Google Icon" />
-          Sign Up with Google
-        </button>
       </form>
     );
   }
@@ -154,13 +112,7 @@ import { db } from '../../config/firebaseConfig.ts';
 function RenderSignUp() {
   return (
     <>
-      <div className="top-bar"></div>
-      <div className="brand-container">
-        <i className="login-brand-icon bi-wallet d-inline-block align-text-top"></i>
-        <Link className="login-brand-link navbar-brand" to="/">
-          WeGonBudget
-        </Link>
-      </div>
+      <TopBar />
       <div className="login-form">
         <SignUp />
       </div>

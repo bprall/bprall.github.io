@@ -10,6 +10,7 @@ import {
   browserSessionPersistence
 } from 'firebase/auth';
 import { auth } from '../../config/firebaseConfig';
+import TopBar from "../top-bar";
 
 function signInWithGoogle() {
   const provider = new GoogleAuthProvider();
@@ -80,11 +81,7 @@ function RenderLogin() {
 
   return (
     <>
-      <div className="top-bar"></div>
-      <div className="brand-container">
-        <i className="login-brand-icon bi-wallet d-inline-block align-text-top"></i>
-        <Link className="login-brand-link navbar-brand" to="/">Distant Dollar</Link>
-      </div>
+      <TopBar />
       <div className="login-form">
         <form id="login-form" onSubmit={handleSubmit}>
           {fields.map((field, index) => (
@@ -107,13 +104,9 @@ function RenderLogin() {
             type="submit"
             value="Sign in"
           />
-          <button type="button" className="google-btn" onClick={handleGoogleSignIn}>
-            <img className="google-icon" src="https://cdn1.iconfinder.com/data/icons/google-s-logo/150/Google_Icons-09-512.png" alt="Google Icon" />
-            Sign In with Google
-          </button>
         </form>
         <p id="link-to-signup">
-          Don't have an account? <Link to="/signup">Sign Up</Link>
+          Don't have an account? Request to <Link to="/signup">Sign Up</Link>.
         </p>
       </div>
     </>
