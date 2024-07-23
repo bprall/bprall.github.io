@@ -1,7 +1,7 @@
 .top-bar {
     width: 100%;
     height: 60px;
-    background-color: #2f4066;
+    background-color: var(--primary-color);
 }
 
 .brand-container {
@@ -75,3 +75,8 @@
     text-align: center;
 }
 
+@media (max-width: 850px) {
+    .login-form {
+        width: 90vw;
+    }
+}

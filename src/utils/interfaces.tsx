@@ -26,7 +26,7 @@ export interface About {
   }[];
 }
 
-interface FrontPageSection {
+export interface FrontPageSection {
   title: string;
   content: string;
   link?: string;

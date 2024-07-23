@@ -1,4 +1,5 @@
 import { Route, Routes } from "react-router-dom";
+import { ReactNode } from "react";
 import firebase from "firebase/compat/app";
 import "firebase/compat/auth";
 import firebaseConfig from "./config/firebaseConfig";
@@ -15,7 +16,6 @@ import RenderLogin from "./components/auth/login";
 import RenderSignUp from "./components/auth/signup";
 import { AuthProvider } from "./components/auth/auth";
 import { RequireAuth } from "./components/auth/requireAuth";
-import { ReactNode } from "react";
 
 firebase.initializeApp(firebaseConfig);
 
@@ -33,6 +33,7 @@ function ProtectedRoute({ element }: { element: ReactNode }) {
   return (
     <RequireAuth>
       <div className="main-container">
+        <RenderSearch />
         <RenderNavbar />
         {element}
       </div>

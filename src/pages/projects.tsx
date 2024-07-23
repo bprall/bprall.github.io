@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { Project } from '../utils/interfaces';
 
 const ProjectsPage: React.FC = () => {
+
   const [projects, setProjects] = useState<Project[]>([]);
   const [searchTerm, setSearchTerm] = useState<string>('');
 

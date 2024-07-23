@@ -25,12 +25,12 @@
 .home-card-title {
     margin: 0;
     font-weight: 500;
-    color: #2f4066;
+    color: var(--primary-color);
     font-weight: bold;
 }
 
 .home-card-link {
-    color: #2f4066;
+    color: var(--primary-color);
     transition: color 0.5s ease;
 }
 
@@ -56,7 +56,7 @@ input[type=submit] {
     box-sizing: border-box;
     color: white;
     border: none;
-    background-color: #2f4066;
+    background-color: var(--primary-color);
     font-weight: 500;
     margin-bottom: 25px;
     margin-top: 10px;
@@ -94,7 +94,7 @@ input[type=submit]:hover {
 }
 
 .hover-bar {
-    background-color: #2f4066;
+    background-color: var(--primary-color);
     width: 0;
     height: 5px;
     margin-top: -4px;
@@ -112,7 +112,7 @@ input[type=submit]:hover {
 
 .home-header-container {
     width: 50%;
-    color: #2f4066;
+    color: var(--primary-color);
 }
 
 .footer {
@@ -120,7 +120,13 @@ input[type=submit]:hover {
 }
 
 @media (max-width: 850px) {
+    #home {
+        margin-top: 5rem;
+    }
     #home-text-container {
         width: 100%;
+    }
+    .about-card {
+        width: 50%;
     }
 }

@@ -1,16 +1,25 @@
+:root {
+  --primary-color: #2f4066;
+  --secondary-color: #fff;
+  --text-color: #000;
+  --background-color: #e2e2e2;
+  --highlight-color: #f1f1f1;
+}
+
 html,body {
-  background-color: #e2e2e2;
+  background-color: var(--background-color);
   font-family: 'Poppins', sans-serif;
   color: rgb(0, 0, 0);
   width: 100%;
   margin: 0;
   padding: 0;
   overflow-y: hidden;
+  scroll-behavior: smooth;
 }
 
 .wrapper {
   overflow-y: auto;
-  background-color: #e2e2e2;
+  background-color: var(--background-color);
   width: 100%;
   margin: 0;
   padding: 0;
