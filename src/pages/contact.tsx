@@ -4,7 +4,7 @@ import data from '../../data.json';
 import { ChangeIcon } from '../utils/mouseEvents';
 import '../styles/contact.css';
 
-const about = data.about;
+const contact = data.contact;
 
 const RenderContact: React.FC = () => {
   return (
@@ -24,20 +24,20 @@ const RenderContact: React.FC = () => {
         <div className="contact-info">
           <div id="location"> 
             <h4>Location</h4>       
-            <p className="contact-text">{about.address}</p>
+            <p className="contact-text">{contact.address}</p>
           </div>
           <div id="contact-details">
             <h4>Contact Details</h4>
             <p className="contact-text">Email: &nbsp;&nbsp;
-            <a className="contact-link" href={`mailto:${about.email}`}>{about.email}</a></p><br />
+            <a className="contact-link" href={`mailto:${contact.email}`}>{contact.email}</a></p><br />
             <p className="contact-text">Phone: &nbsp;&nbsp;
-            <a className="contact-link" href={`tel:${about.phone}`}>{about.phone}</a></p>
+            <a className="contact-link" href={`tel:${contact.phone}`}>{contact.phone}</a></p>
           </div>
           <div id="socials">
             <h4>Socials</h4>
             <Link
               className='social-links social-links-icons'
-              to={about.github[0]}
+              to={contact.github[0]}
               target="_blank"
               onMouseEnter={() => ChangeIcon('.icon', 'icon-github-logo', 'icon-github-reverse')}
               onMouseLeave={() => ChangeIcon('.icon', 'icon-github-reverse', 'icon-github-logo')}
@@ -46,7 +46,7 @@ const RenderContact: React.FC = () => {
             </Link>
             <Link
               className='social-links social-links-icons'
-              to={about.linkedin[0]}
+              to={contact.linkedin[0]}
               target="_blank"
               onMouseEnter={() => ChangeIcon('.icon', 'icon-linkedin-logo', 'icon-linkedinreverse')}
               onMouseLeave={() => ChangeIcon('.icon', 'icon-linkedin-reverse', 'icon-linkedin-logo')}

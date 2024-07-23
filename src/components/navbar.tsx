@@ -4,7 +4,7 @@ import { ChangeIcon } from '../utils/mouseEvents';
 import { useAuth } from './auth/auth';
 import { getAuth, signOut } from 'firebase/auth';
 import { Dropdown } from 'react-bootstrap';
-import Project from '../utils/projectInterface';
+import { Project } from '../utils/interfaces';
 
 function CapitalizeFirst(str: string): string {
   return str.charAt(0).toUpperCase() + str.slice(1);

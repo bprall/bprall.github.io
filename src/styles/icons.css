@@ -26,6 +26,10 @@
     background-image: url('../assets/bp-bb.png');
 }
 
+.icon-search {
+    background-image: url('../assets/icon-search.png');
+}
+
 .icon {
     width: 40px; 
     height: 40px; 

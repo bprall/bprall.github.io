@@ -1,6 +1,6 @@
 html,body {
-  background-color: #696969;
-  color: white;
+  background-color: #dadada;
+  color: rgb(0, 0, 0);
   width: 100%;
   margin: 0;
   padding: 0;
@@ -9,7 +9,7 @@ html,body {
 
 .wrapper {
   overflow-y: auto;
-  background-color: #696969;
+  background-color: #dadada;
   width: 100%;
   margin: 0;
   padding: 0;
@@ -19,26 +19,6 @@ html,body {
 i {
   margin-right: 8px;
   background-size: 1rem 1rem;
-}
-
-.alert-bar {
-  width: 100%;
-  height: auto;
-  background-color: #3374ff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  color: white;
-}
-
-.alert {
-  width: 90%;
-  margin: auto;
-  padding-top: 6px;
-  padding-bottom: 6px;
-  margin-bottom: 25px;
 }
 
 .btn-close {

@@ -1,15 +1,18 @@
-import { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import data from '../../data.json';
+import DateClock from '../components/dateClock';
 
 function RenderFrontPage() {
     const cards = data.frontPage || [];
+    
+    const cardRefs = useRef<HTMLDivElement[]>([]);
 
-    const cardRefs = cards.map(() => useRef<HTMLDivElement>(null));
+    const [isFixed, setIsFixed] = useState(false);
 
     const handleIntersection = (entries: IntersectionObserverEntry[], observer: IntersectionObserver) => {
         entries.forEach((entry, index) => {
-            if (entry.isIntersecting && cardRefs[index].current) {
+            if (entry.isIntersecting && cardRefs.current[index]) {
                 entry.target.classList.add('fade-in');
                 observer.unobserve(entry.target);
             }
@@ -25,9 +28,9 @@ function RenderFrontPage() {
 
         const observer = new IntersectionObserver(handleIntersection, observerOptions);
 
-        cardRefs.forEach((ref) => {
-            if (ref.current) {
-                observer.observe(ref.current);
+        cardRefs.current.forEach((ref) => {
+            if (ref) {
+                observer.observe(ref);
             }
         });
 
@@ -35,6 +38,19 @@ function RenderFrontPage() {
             observer.disconnect();
         };
     }, [cardRefs]);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const scrollTop = window.scrollY;
+            setIsFixed(scrollTop > 48); 
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
 
     return (
         <div id="home">
@@ -47,7 +63,11 @@ function RenderFrontPage() {
             <div id="home-content-container">
                 <div id="home-text-container">
                     {cards.map((card, index) => (
-                        <div className="home-card" key={index} ref={cardRefs[index]}>
+                        <div
+                            className="home-card"
+                            key={index}
+                            ref={(el) => cardRefs.current[index] = el}
+                        >
                             <div className="hover-bar"></div>
                             {card.link ? (
                                 <Link to={card.link} className="home-card-link">
@@ -59,6 +79,12 @@ function RenderFrontPage() {
                             <p className="home-card-content">{card.content}</p>
                         </div>
                     ))}
+                </div>
+                <div
+                    id="date-clock-container"
+                    className={isFixed ? 'fixed' : ''}
+                >
+                    <DateClock />
                 </div>
             </div>
             <div className="home-header-container" id="about-header">

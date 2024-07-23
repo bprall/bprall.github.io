@@ -2,7 +2,7 @@ import { Route, Routes } from "react-router-dom";
 import firebase from "firebase/compat/app";
 import "firebase/compat/auth";
 import firebaseConfig from "./config/firebaseConfig";
-import RenderAlert from "./components/alert";
+import RenderSearch from "./components/search";
 import RenderNavbar from "./components/navbar";
 import RenderAbout from "./pages/about";
 import RenderContact from "./pages/contact";
@@ -22,7 +22,7 @@ firebase.initializeApp(firebaseConfig);
 const Layout: React.FC<{ children: ReactNode }> = ({ children }) => {
   return (
     <div className="wrapper">
-      <RenderAlert />
+      <RenderSearch />
       <RenderNavbar />
       {children}
     </div>

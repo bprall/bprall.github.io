@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import Project from '../utils/projectInterface';
+import { Project } from '../utils/interfaces';
 
 const ProjectsPage: React.FC = () => {
   const [projects, setProjects] = useState<Project[]>([]);
@@ -25,7 +25,7 @@ const ProjectsPage: React.FC = () => {
   return (
     <section id="projects">
       <div className="staggered-grid-container">
-        <div className="projects-search">
+        <div className="projects-search staggered-grid-item">
           <h2>Projects</h2>
           <div className="projects-searchbar">
             <input

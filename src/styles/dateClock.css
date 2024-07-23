@@ -1,0 +1,89 @@
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+#date-clock-container {
+    position: fixed;
+    top: 20rem; 
+    right: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; 
+    transition: top 0.3s ease;
+    animation: fadeIn 1s ease-out;
+}
+
+.fixed-clock {
+    position: relative;
+    top: 0;
+    right: 0;
+    padding: 10px;
+    background: white;
+    border: 1px solid #ddd;
+    z-index: 1000; 
+}
+
+.date-clock {
+    background-color: #2f4066;
+    color: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, .5);
+    text-align: center;
+    width: 300px;
+    max-width: 90vw; 
+}
+
+.date-clock h2 {
+    margin: 0;
+    font-size: 36px; 
+    font-weight: 600;
+}
+
+.date-clock p {
+    margin: 10px 0 0;
+    font-size: 24px; 
+    font-weight: 400;
+}
+
+@media (max-width: 1200px) {
+    .date-clock {
+        width: 250px;
+        padding: 30px;
+    }
+
+    .date-clock h2 {
+        font-size: 32px;
+    }
+
+    .date-clock p {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 992px) {
+    .date-clock {
+        width: 200px;
+        padding: 20px;
+    }
+
+    .date-clock h2 {
+        font-size: 28px;
+    }
+
+    .date-clock p {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 850px) {
+    #date-clock-container {
+        display: none;
+    }
+}
