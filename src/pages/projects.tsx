@@ -39,7 +39,7 @@ const ProjectsPage: React.FC = () => {
         </div>
         {filteredProjects.map((project) => (
           <div key={project.id} className="projects-individual staggered-item">
-            <h4 className="projects-title">{project.title}</h4>
+            <h4 className="projects-title" dangerouslySetInnerHTML={{ __html: project.title || '' }}/>
             <div className="projects-desc" dangerouslySetInnerHTML={{ __html: project.description || '' }} />
             <Link to={`/projects/${project.id}`} className="read-more">
               <button className="read-more-button">Read More</button>

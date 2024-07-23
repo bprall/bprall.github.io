@@ -1,5 +1,5 @@
 html,body {
-  background-color: #dadada;
+  background-color: #e2e2e2;
   font-family: 'Poppins', sans-serif;
   color: rgb(0, 0, 0);
   width: 100%;
@@ -10,7 +10,7 @@ html,body {
 
 .wrapper {
   overflow-y: auto;
-  background-color: #dadada;
+  background-color: #e2e2e2;
   width: 100%;
   margin: 0;
   padding: 0;

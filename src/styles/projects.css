@@ -64,6 +64,24 @@
   color: #555;
 }
 
+.projects-desc a{
+  color: #555;
+  transition: 0.3s ease;
+}
+
+.projects-desc a:hover{
+  color: #9c9c9c;
+}
+
+.projects-title a{
+  color: black;
+  transition: color .3s ease;
+}
+
+.projects-title a:hover{
+  color: #9c9c9c;
+}
+
 .read-more-button {
   display: inline-block;
   margin: 1rem;
