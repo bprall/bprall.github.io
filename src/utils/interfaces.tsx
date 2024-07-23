@@ -45,3 +45,12 @@ export interface Contact {
   linkedin: string[];
   icons: string[];
 }
+
+export interface NewsItem {
+  title: string;
+  date: string;
+}
+
+export interface NewsData {
+  news: NewsItem[];
+}

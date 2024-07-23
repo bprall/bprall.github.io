@@ -22,22 +22,20 @@
     opacity: 0;
 }
 
+.home-card-title {
+    margin: 0;
+    font-weight: 500;
+    color: #2f4066;
+    font-weight: bold;
+}
+
 .home-card-link {
-    color: black;
+    color: #2f4066;
     transition: color 0.5s ease;
 }
 
 .home-card-link:hover {
     color: #838383;
-}
-
-.home-card-link:hover .hover-bar {
-    width: 100%;
-}
-
-.home-card-title {
-    margin: 0;
-    font-weight: 500;
 }
 
 .fade-in {
@@ -114,6 +112,7 @@ input[type=submit]:hover {
 
 .home-header-container {
     width: 50%;
+    color: #2f4066;
 }
 
 .footer {

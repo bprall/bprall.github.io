@@ -24,6 +24,15 @@
   padding: 20px;
 }
 
+#projects-page-title {
+  font-size: 3rem; 
+  font-weight: bold;
+  color: #2f4066;
+  margin-bottom: 1rem;
+  text-align: center;
+  animation: fadeInFromLeft 1s ease-out; 
+}
+
 .projects-searchbar input[type="search"] {
   padding: 10px;
   border-radius: 50px;
@@ -36,6 +45,7 @@
 
 .projects-search {
   text-align: center;
+  animation: fadeInFromLeft 1s ease-out;
 }
 
 .projects-individual {
@@ -50,22 +60,35 @@
 }
 
 .projects-desc {
-  font-size: 20px;
+  font-size: 18px;
   color: #555;
 }
 
-.read-more {
-  margin-top: 50px;
+.read-more-button {
+  display: inline-block;
+  margin: 1rem;
   text-decoration: none;
-  font-size: 20px;
-  color: #4e4e4e;
-  font-weight: bold;
-  transition: color 0.3s ease;
+  font-size: 18px;
+  color: white;
+  width: 35%;
+  background-color: #2f4066;
+  border: none;
+  border-radius: 50px;
+  padding: 0.75rem 1.5rem; 
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
 }
 
-.read-more:hover {
-  color: rgb(180, 180, 180);
-  text-decoration: underline;
+.read-more-button:hover {
+  color: #2f4066; 
+  background-color: #eeeeee; 
+  transform: translateY(-2px);
+}
+
+.read-more-button:active {
+  transform: translateY(1px);
 }
 
 .staggered-grid-container {
@@ -82,7 +105,17 @@
 }
 
 @media (max-width: 850px) {
+  #projects-page-title {
+    font-size: 2rem; 
+    animation: fadeInFromRight 1s ease-out;
+  }
+
+  .projects-search {
+    animation: fadeInFromRight 1s ease-out;
+  }
+
   .staggered-grid-container {
+    animation: fadeInFromRight 1s ease-out;
     grid-template-columns: 1fr;
     grid-gap: 20px;
   }

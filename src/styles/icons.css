@@ -26,6 +26,14 @@
     background-image: url('../assets/bp-bb.png');
 }
 
+.icon-bp-bbl {
+    background-image: url('../assets/bp-bbl.png');
+}
+
+.icon-bp-blw {
+    background-image: url('../assets/bp-blw.png');
+}
+
 .icon-search {
     background-image: url('../assets/icon-search.png');
 }

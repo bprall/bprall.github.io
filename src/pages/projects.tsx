@@ -26,7 +26,7 @@ const ProjectsPage: React.FC = () => {
     <section id="projects">
       <div className="staggered-grid-container">
         <div className="projects-search staggered-grid-item">
-          <h2>Projects</h2>
+          <h2 id="projects-page-title">Projects</h2>
           <div className="projects-searchbar">
             <input
               type="search"
@@ -39,10 +39,10 @@ const ProjectsPage: React.FC = () => {
         </div>
         {filteredProjects.map((project) => (
           <div key={project.id} className="projects-individual staggered-item">
-            <h3>{project.title}</h3>
+            <h4 className="projects-title">{project.title}</h4>
             <div className="projects-desc" dangerouslySetInnerHTML={{ __html: project.description || '' }} />
             <Link to={`/projects/${project.id}`} className="read-more">
-              <u>Read More</u>
+              <button className="read-more-button">Read More</button>
             </Link>
           </div>
         ))}

@@ -45,10 +45,10 @@ function RenderNavbar() {
           <Link
             className="nonuser-navbar-brand navbar-brand"
             to="/"
-            onMouseEnter={() => ChangeIcon('.icon', 'icon-bp-logo', 'icon-bp-bw')}
-            onMouseLeave={() => ChangeIcon('.icon', 'icon-bp-bw', 'icon-bp-logo')}
+            onMouseEnter={() => ChangeIcon('.icon', 'icon-bp-bbl', 'icon-bp-blw')}
+            onMouseLeave={() => ChangeIcon('.icon', 'icon-bp-blw', 'icon-bp-bbl')}
           >
-            <i className="icon icon-bp-logo"></i>
+            <i className="icon icon-bp-bbl"></i>
           </Link>
           <ul className="nav nav-pills">
             <li className="nonuser-nav-item nav-item">
