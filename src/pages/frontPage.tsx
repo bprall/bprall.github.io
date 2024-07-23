@@ -97,7 +97,7 @@ function RenderFrontPage() {
                     <div className="hover-bar"></div>
                     <img src="https://cdn.glitch.global/b0561b3a-67fa-44de-99d8-728d82b14013/1701894420208%20(2).jpg?v=1715368201737" />
                     <h4>Blake Prall<i className="bi bi-chevron-right"></i></h4>
-                    <p>Blake is a recent Graduate from Boston College with a double major in computer science.</p>
+                    <p>Blake is a recent graduate from Boston College with a double major in computer science and neuroscience.</p>
                 </div>
             </div>
         </div>

@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import '../styles/projectPage.css';
 
 interface ProjectMaterial {
   label: string;
@@ -45,6 +44,7 @@ const RenderProjectPage: React.FC = () => {
             fetchProjectData();
         }
     }, [id]);
+
     if (loading) {
         return (
             <main>
@@ -52,6 +52,7 @@ const RenderProjectPage: React.FC = () => {
             </main>
         );
     }
+
     if (error) {
         return (
             <main>
@@ -59,6 +60,7 @@ const RenderProjectPage: React.FC = () => {
             </main>
         );
     }
+
     if (!project) {
         return (
             <main>
@@ -66,47 +68,28 @@ const RenderProjectPage: React.FC = () => {
             </main>
         );
     }
-    if (project.type === "pdf") {
-        return (
-            <main>
-                <section className="project" id="pdf">
-                    <h3>
-                        {project.title}
-                        <a href={project.titleLink}>
-                            <u>{project.titleLinkLabel}</u>
-                        </a>
-                    </h3>
+
+    return (
+        <main>
+            <section className="project" id={project.type}>
+                <h3>
+                    {project.title}
+                    <a href={project.titleLink} target='_blank'>
+                        <u>{project.titleLinkLabel}</u>
+                    </a>
+                </h3>
+                {project.type === "pdf" ? (
                     <iframe
                         src={project.materials ? project.materials[0].path : ""}
                         style={{ width: "100%", height: "100vh" }}
                         scrolling="yes"
                     ></iframe>
-                </section>
-            </main>
-        );
-    } else if (project.type === "text") {
-        return (
-            <main>
-                <section className="project" id="text">
-                    <h3>
-                        {project.title}
-                        <a href={project.titleLink}>
-                            <u>{project.titleLinkLabel}</u>
-                        </a>
-                    </h3>
-                    <div
-                        dangerouslySetInnerHTML={{ __html: project.contents || '' }}
-                    />
-                </section>
-            </main>
-        );
-    } else {
-        return (
-            <main>
-                <p>Project not found.</p>
-            </main>
-        );
-    }
+                ) : (
+                    <div className='project-text' dangerouslySetInnerHTML={{ __html: project.contents || '' }} />
+                )}
+            </section>
+        </main>
+    );
 };
 
 export default RenderProjectPage;

@@ -10,7 +10,6 @@
 }
 
 .contact {
-  font-family: 'Poppins', sans-serif;
   padding: 20px;
   max-width: 1200px; 
   margin: 0 auto; 
@@ -27,7 +26,7 @@
   padding: 20px;
   border: 1px solid #ddd;
   background-color: #f9f9f9;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
   animation: fadeInFromBottom .8s ease-out;
 }
   

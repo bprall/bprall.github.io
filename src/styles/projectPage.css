@@ -1,0 +1,49 @@
+:root {
+    --primary-color: #2f4066;
+    --secondary-color: #fff;
+    --text-color: #000;
+    --background-color: #e2e2e2;
+    --highlight-color: #f1f1f1;
+    --border-radius: 10px;
+    --padding: 1rem;
+    --margin-horizontal: 40px;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: Arial, sans-serif;
+}
+
+.project {
+    margin: var(--margin-horizontal);
+    padding: var(--padding);
+    background-color: var(--highlight-color);
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.project h3 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--padding);
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    border-radius: var(--border-radius);
+    margin-bottom: 1rem;
+}
+
+.project h3 a {
+    color: var(--secondary-color);
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+.project h3 a:hover {
+    color: #747474;
+}
+
+.project p {
+    margin: var(--padding) var(--margin-horizontal);
+}
