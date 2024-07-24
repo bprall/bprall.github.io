@@ -16,7 +16,7 @@ const RenderFrontPage: React.FC = () => {
         const response = await fetch('../../data.json');
         const data: FrontPage = await response.json();
         setCards(data.frontPage || []);
-        setDataLoaded(true); // Set dataLoaded to true after data is fetched
+        setDataLoaded(true);
       } catch (error) {
         console.error('Error fetching data:', error);
       }

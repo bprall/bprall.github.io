@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react"
 
-function RenderFrontPage() {
+function RenderSourceCode() {
     const cards = [
         {"header": "TRACK EXPENSES", "body": "Effortlessly track your expenses with our intuitive platform, gaining valuable insights into your spending habits. Distant Dollar allows you to breakdown your expenditures into their respective categories, making it easy to identify where your money is going. Monitor your account balance and stay on top of your monthly budget with real-time updates, ensuring you never overspend. Additionally, our platform helps you catch and manage unwanted subscriptions, providing a clear overview of recurring charges and empowering you to make informed decisions about your financial commitments. With user-friendly interfaces and personalized financial tips, Distant Dollar goes beyond tracking – it actively guides you towards achieving your financial goals, whether it's building savings, reducing debt, or planning for future investments."},
         {"header": "CREATE A PLAN", "body": "Craft a roadmap to financial success with our strategic planning tools. Our platform provides you with the process of creating a personalized plan, taking into account your income, expenses, and long-term aspirations. Whether you're aiming to build an emergency fund, save for a dream vacation, or invest for the future, Distant Dollar empowers you with the tools to outline, track, and achieve your financial milestones. Moreover, stay in control of your goals by regularly reviewing and adjusting your plan as life evolves. If you experience a shift in income, unexpected financial burdens, or create new goals, our platform ensures that your financial roadmap remains flexible and aligned with your current situation. "},
@@ -77,4 +77,4 @@ function RenderFrontPage() {
     )
 }
 
-export default RenderFrontPage
+export default RenderSourceCode;

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Project } from '../utils/interfaces';
 
-const ProjectsPage: React.FC = () => {
+const RenderProjects: React.FC = () => {
 
   const [projects, setProjects] = useState<Project[]>([]);
   const [searchTerm, setSearchTerm] = useState<string>('');
@@ -65,4 +65,4 @@ const ProjectsPage: React.FC = () => {
   );
 };
 
-export default ProjectsPage;
+export default RenderProjects;

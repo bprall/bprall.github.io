@@ -5,7 +5,7 @@ import "firebase/compat/auth";
 import firebaseConfig from "./config/firebaseConfig";
 import RenderSearch from "./components/search";
 import RenderNavbar from "./components/navbar";
-import RenderAbout from "./pages/about";
+import RenderAbout  from "./pages/about";
 import RenderContact from "./pages/contact";
 import RenderProjects from "./pages/projects";
 import RenderFrontPage from "./pages/frontPage";

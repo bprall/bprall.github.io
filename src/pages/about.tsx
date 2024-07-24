@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { NewsItem, About } from '../utils/interfaces';
 
-const AboutPage: React.FC = () => {
+const RenderAbout: React.FC = () => {
   const [about, setAbout] = useState<About | null>(null);
   const [news, setNews] = useState<NewsItem[]>([]);
   const [searchTerm, setSearchTerm] = useState<string>('');
@@ -83,4 +83,4 @@ const AboutPage: React.FC = () => {
   );
 }
 
-export default AboutPage;
+export default RenderAbout;
