@@ -62,6 +62,9 @@
 .projects-desc {
   font-size: 18px;
   color: #555;
+  margin: 1rem;
+  padding-right: 1rem;
+  box-sizing: border-box;
 }
 
 .projects-desc a{
@@ -71,6 +74,24 @@
 
 .projects-desc a:hover{
   color: #9c9c9c;
+}
+
+.projects-desc-box {
+  text-align: justify;
+}
+
+.projects-desc-float {
+  float: right;
+  height: 100%;
+  margin-left: 1rem;
+}
+
+.projects-desc-image {
+  max-width: 250px; 
+  max-height: 250px; 
+  width: auto; 
+  height: auto; 
+  border: 2px solid var(--primary-color);
 }
 
 .projects-title a{

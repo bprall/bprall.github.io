@@ -41,7 +41,20 @@ const ProjectsPage: React.FC = () => {
         {filteredProjects.map((project) => (
           <div key={project.id} className="projects-individual staggered-item">
             <h4 className="projects-title" dangerouslySetInnerHTML={{ __html: project.title || '' }}/>
-            <div className="projects-desc" dangerouslySetInnerHTML={{ __html: project.description || '' }} />
+            <div className="projects-desc-wrapper">
+              <div className='projects-desc-box'>
+                <div className="projects-desc-float">
+                  {project.descriptionImage && (
+                    <img
+                      src={project.descriptionImage}
+                      alt={project.title}
+                      className="projects-desc-image"
+                    />
+                  )}
+                </div>
+                <p className="projects-desc-text" dangerouslySetInnerHTML={{ __html: project.description || '' }} />
+              </div>
+            </div>
             <Link to={`/projects/${project.id}`} className="read-more">
               <button className="read-more-button">Read More</button>
             </Link>

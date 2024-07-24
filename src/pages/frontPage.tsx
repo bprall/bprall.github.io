@@ -102,7 +102,7 @@ const RenderFrontPage: React.FC = () => {
           <DateClock />
         </div>
       </div>
-      {dataLoaded && ( // Only render this section if dataLoaded is true
+      {dataLoaded && (
         <section id='contact-me'>
           <div className="home-header-container" id="about-header">
             <div>

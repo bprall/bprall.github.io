@@ -10,6 +10,8 @@ export interface Project {
     titleLink: string;
     titleLinkLabel: string;
     description: string;
+    descriptionImage?: string;
+    contentImages?: string[];
     contents?: string;
     materials?: ProjectMaterial[];
   }
