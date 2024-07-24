@@ -174,9 +174,9 @@
       }
     ],
     "contact": {
-      "address": "Blaine, MN",
-      "phone": "(651)-808-2645",
-      "email": "prallb@bc.edu",
+      "address": ["Blaine, MN","address"],
+      "phone": ["(651)-808-2645","phone"],
+      "email": ["prallb@bc.edu", "email"],
       "github": ["https://www.github.com/bprall", "github.com/bprall"],
       "url": ["https://bprall.github.io","bprall.github.io"],
       "linkedin": ["https://www.linkedin.com/in/bprall/", "linkedin.com/in/bprall"],

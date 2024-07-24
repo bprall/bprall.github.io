@@ -24,14 +24,14 @@ const RenderContact: React.FC = () => {
         <div className="contact-info">
           <div id="location"> 
             <h4>Location</h4>       
-            <p className="contact-text">{contact.address}</p>
+            <p className="contact-text">{contact.address[0]}</p>
           </div>
           <div id="contact-details">
             <h4>Contact Details</h4>
             <p className="contact-text">Email: &nbsp;&nbsp;
-            <a className="contact-link" href={`mailto:${contact.email}`}>{contact.email}</a></p><br />
+            <a className="contact-link" href={`mailto:${contact.email[0]}`}>{contact.email[0]}</a></p><br />
             <p className="contact-text">Phone: &nbsp;&nbsp;
-            <a className="contact-link" href={`tel:${contact.phone}`}>{contact.phone}</a></p>
+            <a className="contact-link" href={`tel:${contact.phone[0]}`}>{contact.phone[0]}</a></p>
           </div>
           <div id="socials">
             <h4>Socials</h4>

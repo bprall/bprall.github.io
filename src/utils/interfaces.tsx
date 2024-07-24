@@ -39,9 +39,9 @@ export interface FrontPage {
 }
 
 export interface Contact {
-  address: string;
-  phone: string;
-  email: string;
+  address: string[];
+  phone: string[];
+  email: string[];
   github: string[];
   url: string[];
   linkedin: string[];
