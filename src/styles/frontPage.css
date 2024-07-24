@@ -78,6 +78,8 @@ input[type=submit]:hover {
     width: 33%;
     border-top: 2px solid gray;
     cursor: pointer;
+    text-decoration: none;
+    color: var(--text-color);
 }
 
 .about-card img {

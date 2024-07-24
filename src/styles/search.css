@@ -85,10 +85,16 @@
   .form-inline {
     width: 40%;
   }
+  .search-results {
+    width: 36%;
+  }
 }
 
 @media (max-width: 850px){
   .form-inline {
     width: 66%;
+  }
+  .search-results {
+    width: 60%;
   }
 }
