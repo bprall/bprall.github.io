@@ -264,7 +264,7 @@ const RenderSearch: React.FC = () => {
                     <p id="result-name">
                       {result.title.length > 25 ? `${result.title.substring(0, 25)}...` : result.title}
                     </p>
-                    <p id="reasult-page">
+                    <p id="result-page">
                       (Project Page)
                     </p>
                   </div>
@@ -279,7 +279,7 @@ const RenderSearch: React.FC = () => {
                     <p id="result-name">
                       {result.title.length > 25 ? `${result.title.substring(0, 25)}...` : result.title}
                     </p>
-                    <p id="reasult-page">
+                    <p id="result-page">
                       (Home)
                     </p>
                   </div>
@@ -294,7 +294,7 @@ const RenderSearch: React.FC = () => {
                     <p id="result-name">
                       Contact Me
                     </p>
-                    <p id="reasult-page">
+                    <p id="result-page">
                       (Home)
                     </p>
                   </div>
@@ -309,7 +309,7 @@ const RenderSearch: React.FC = () => {
                     <p id="result-name">
                       {result.name.length > 25 ? `${result.name.substring(0, 25)}...` : result.name}
                     </p>
-                    <p id="reasult-page">
+                    <p id="result-page">
                       (About)
                     </p>
                   </div>
@@ -324,7 +324,7 @@ const RenderSearch: React.FC = () => {
                     <p id="result-name">
                       {result.title.length > 25 ? `${result.title.substring(0, 25)}...` : result.title}
                     </p>
-                    <p id="reasult-page">
+                    <p id="result-page">
                       (About)
                     </p>
                   </div>
@@ -339,7 +339,7 @@ const RenderSearch: React.FC = () => {
                       <p id="result-name">
                         Address: {contact.address[0]} 
                       </p>
-                      <p id="reasult-page">
+                      <p id="result-page">
                         (Contact)
                       </p>
                     </div>

@@ -21,7 +21,7 @@
 .form-inline {
   display: flex;
   align-items: center;
-  width: 33%;
+  width: 36%;
   justify-content: center;
 }
 
@@ -59,10 +59,10 @@
   color: black;
   position: absolute;
   top: 3rem;
-  width: 30%;
+  width: 33%;
   max-height: 300px;
   overflow-y: auto;
-  z-index: 1000;
+  z-index: 9999;
   border: 3px solid var(--primary-color);
 }
 
@@ -90,6 +90,16 @@
   margin-bottom: 0;
   margin-top: 0;
   padding: 0;
+}
+
+#result-page {
+  white-space: nowrap;
+  margin: 0;
+  margin-left: 1rem;
+}
+
+#result-name {
+  margin-bottom: 0;
 }
 
 @media (max-width: 1200px){
