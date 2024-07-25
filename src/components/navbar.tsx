@@ -39,6 +39,10 @@ function RenderNavbar() {
     }
   };
 
+  const handleOffCanvasLinkClick = () => {
+    setShowOffcanvas(false);
+  };
+
   return (
     <>
       {/* Standard Navbar */}
@@ -128,12 +132,12 @@ function RenderNavbar() {
         <Offcanvas.Body>
           <ul className="nav flex-column">
             <li className="nonuser-nav-item nav-item">
-              <Link className="nonuser-nav-link nav-link" to="/">
+              <Link className="nonuser-nav-link nav-link" to="/" onClick={handleOffCanvasLinkClick}>
                 {CapitalizeFirst('home')}
               </Link>
             </li>
             <li className="nonuser-nav-item nav-item">
-              <Link className="nonuser-nav-link nav-link" to="/about">
+              <Link className="nonuser-nav-link nav-link" to="/about" onClick={handleOffCanvasLinkClick}>
                 {CapitalizeFirst('about')}
               </Link>
             </li>
@@ -143,7 +147,7 @@ function RenderNavbar() {
                   {CapitalizeFirst('projects')}
                 </Dropdown.Toggle>
                 <Dropdown.Menu>
-                  <Dropdown.Item key='projects' as={Link} to="/projects">
+                  <Dropdown.Item key='projects' as={Link} to="/projects" onClick={handleOffCanvasLinkClick}>
                     {CapitalizeFirst('Projects Page')}
                   </Dropdown.Item>
                   <Dropdown.Divider />
@@ -152,6 +156,7 @@ function RenderNavbar() {
                       key={project.id}
                       as={Link}
                       to={`/projects/${project.id}`}
+                      onClick={handleOffCanvasLinkClick}
                     >
                       {CapitalizeFirst(project.title)}
                     </Dropdown.Item>
@@ -183,7 +188,7 @@ function RenderNavbar() {
                 <i className="bi bi-box-arrow-in-left login-arrow"></i>Log out
               </Link>
             ) : (
-              <Link className="nav-login" to="/login">
+              <Link className="nav-login" to="/login" onClick={handleOffCanvasLinkClick}>
                 <i className="bi bi-box-arrow-in-left login-arrow"></i>Log in
               </Link>
             )}
