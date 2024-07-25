@@ -1,12 +1,32 @@
-import React from 'react';
+import {useEffect, useState} from 'react';
 import { Link } from 'react-router-dom';
-import data from '../../data.json';
 import { ChangeIcon } from '../utils/mouseEvents';
-import '../styles/contact.css';
-
-const contact = data.contact;
+import { Contact } from '../utils/interfaces';
 
 const RenderContact: React.FC = () => {
+  const [contact, setContact] = useState<Contact>(null);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch('../../data.json');
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        const data = await response.json();
+        setContact(data.contact || null);
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
+    };
+  
+    fetchData();
+  }, []);
+
+  if (!contact) {
+    return <p>Loading...</p>;
+  }
+
   return (
     <section className="contact">
       <div className="grid-container">
