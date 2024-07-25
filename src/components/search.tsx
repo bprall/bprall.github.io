@@ -1,10 +1,11 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { Form, FormControl, Button, Dropdown } from 'react-bootstrap';
-import { Project, About, Contact, FrontPageSection, NewsItem } from '../utils/interfaces';
+import { Project, About, Contact, FrontPageParagraph, FrontPageContact, NewsItem } from '../utils/interfaces';
 
 const RenderSearch: React.FC = () => {
-  const [home, setHome] = useState<FrontPageSection[]>([]);
+  const [homeParagraph, setHomeParagraph] = useState<FrontPageParagraph[]>([]);
+  const [homeContact, setHomeContact] = useState<FrontPageContact>(null);
   const [about, setAbout] = useState<About | null>(null);
   const [news, setNews] = useState<NewsItem[]>([]);
   const [contact, setContact] = useState<Contact | null>(null);
@@ -12,7 +13,7 @@ const RenderSearch: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState<string>('');
   const [searchCategory, setSearchCategory] = useState<string>('Global');
   const [filteredProjectResults, setFilteredProjectResults] = useState<Project[]>([]);
-  const [filteredHomeResults, setFilteredHomeResults] = useState<FrontPageSection[]>([]);
+  const [filteredHomeResults, setFilteredHomeResults] = useState<(FrontPageParagraph | FrontPageContact)[]>([]);
   const [filteredAboutResults, setFilteredAboutResults] = useState<(About | NewsItem)[]>([]);
   const [filteredContactResults, setFilteredContactResults] = useState<Partial<Contact> | null>(null);
   const [showResults, setShowResults] = useState(false);
@@ -23,7 +24,8 @@ const RenderSearch: React.FC = () => {
       try {
         const response = await fetch('../../data.json');
         const data = await response.json();
-        setHome(data.frontPage || []);
+        setHomeParagraph(data.frontPage.paragraphs || []);
+        setHomeContact(data.frontPage.contact || null);
         setAbout(data.about || null);
         setNews(data.news || []);
         setProjects(data.projects || []);
@@ -69,15 +71,22 @@ const RenderSearch: React.FC = () => {
 
   useEffect(() => {
     if (searchTerm && (searchCategory === 'Home' || searchCategory === 'Global')) {
-      const results = home.filter(item =>
+      const paragraphResults = homeParagraph ? homeParagraph.filter(item =>
         item.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
         item.content.toLowerCase().includes(searchTerm.toLowerCase())
-      );
-      setFilteredHomeResults(results);
+      ) : [];
+      const contactResults = homeContact ? [
+        homeContact
+      ].filter(item =>
+        item.contactName.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        item.shortSummary.toLowerCase().includes(searchTerm.toLowerCase())
+      ) : null;
+      const combinedResults = [...paragraphResults, ...contactResults];
+      setFilteredHomeResults(combinedResults);
     } else {
       setFilteredHomeResults([]);
     }
-  }, [searchTerm, home, searchCategory]);
+  }, [searchTerm, homeParagraph, homeContact, searchCategory]);
 
   useEffect(() => {
     if (searchTerm && (searchCategory === 'About' || searchCategory === 'Global')) {
@@ -93,7 +102,8 @@ const RenderSearch: React.FC = () => {
       ) : [];
       
       const newsResults = news.filter(item =>
-        item.title.toLowerCase().includes(searchTerm.toLowerCase())
+        item.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        item.date.toLowerCase().includes(searchTerm.toLowerCase())
       );
 
       const combinedResults = [...aboutResults, ...newsResults];
@@ -183,9 +193,15 @@ const RenderSearch: React.FC = () => {
       {showResults && (filteredHomeResults.length > 0 && (searchCategory === 'Home')) && (
         <div className="search-results">
           {filteredHomeResults.map(result => (
-            <Link className="result-row" to="/" key={result.title}>
-              <div className="indiv-result">{result.title}</div>
-            </Link>
+            'title' in result ? (
+              <Link className="result-row" to="/" key={result.title}>
+                <div className="indiv-result">{result.title}</div>
+              </Link>
+            ) : (
+              <Link className="result-row" to="/" key="Contact Me">
+                <div className="indiv-result">Contact Me</div>
+              </Link>
+            )
           ))}
         </div>
       )}
@@ -250,12 +266,22 @@ const RenderSearch: React.FC = () => {
                 </Link>
               );
             }
-            // Check if the result is of type FrontPageSection
+            // Check if the result is of type FrontPageParagraph
             if ( 'content' in result) {
               return (
                 <Link className="result-row" to="/" key={index}>
                   <div className="indiv-result">
                     {result.title.length > 25 ? `${result.title.substring(0, 25)}...` : result.title}
+                  </div>
+                </Link>
+              );
+            }
+            // Check if the result is of type FrontPageContact
+            if ( 'contactName' in result) {
+              return (
+                <Link className="result-row" to="/" key={index}>
+                  <div className="indiv-result">
+                    Contact Me
                   </div>
                 </Link>
               );

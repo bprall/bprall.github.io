@@ -28,14 +28,21 @@ export interface About {
   }[];
 }
 
-export interface FrontPageSection {
+export interface FrontPageContact {
+  contactName: string;
+  shortSummary: string;
+  photo: string;
+}
+
+export interface FrontPageParagraph {
   title: string;
   content: string;
   link?: string;
 }
 
 export interface FrontPage {
-  frontPage: FrontPageSection[];
+  contact: FrontPageContact;
+  paragraphs: FrontPageParagraph[];
 }
 
 export interface Contact {
