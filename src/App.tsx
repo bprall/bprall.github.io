@@ -45,7 +45,7 @@ function App() {
   return (
     <AuthProvider>
       <Routes>
-        <Route path="/" element={<Layout><RenderFrontPage /></Layout>} />
+        <Route path="" element={<Layout><RenderFrontPage /></Layout>} />
         <Route path="/about" element={<Layout><RenderAbout /></Layout>} />
         <Route path="/login" element={<RenderLogin />} />
         <Route path="/signup" element={<RenderSignUp />} />

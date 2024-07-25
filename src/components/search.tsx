@@ -333,73 +333,61 @@ const RenderSearch: React.FC = () => {
             }
             if ('address' in result) {
               return (
-                <div key={index}>
-                  <Link id="result-row" to='/contact'>
-                    <div id="indiv-result">
-                      <p id="result-name">
-                        Address: {contact.address[0]} 
-                      </p>
-                      <p id="result-page">
-                        (Contact)
-                      </p>
-                    </div>
-                  </Link>
-                </div>
+                <Link id="result-row" to='/contact'>
+                  <div id="indiv-result">
+                    <p id="result-name">
+                      Address: {contact.address[0]} 
+                    </p>
+                    <p id="result-page">
+                      (Contact)
+                    </p>
+                  </div>
+                </Link>
               );
             }
             if ('phone' in result) {
               return (
-                <div key={index}>
-                  <a id="result-row" href={`tel:${contact.phone[0]}`}>
-                    <div id="indiv-result">
-                      Phone: {contact.phone[0]} 
-                    </div> 
-                  </a>
-                </div>
+                <a id="result-row" href={`tel:${contact.phone[0]}`}>
+                  <div id="indiv-result">
+                    Phone: {contact.phone[0]} 
+                  </div> 
+                </a>
               );
             }
             if ('email' in result) {
               return (
-                <div key={index}>
-                  <a id="result-row" href={`mailto:${contact.email[0]}`}>
-                    <div id="indiv-result">
-                      Email: {contact.email[0]}
-                    </div>
-                  </a>
-                </div>
+                <a id="result-row" href={`mailto:${contact.email[0]}`}>
+                  <div id="indiv-result">
+                    Email: {contact.email[0]}
+                  </div>
+                </a>
               );
             }
             if ('github' in result) {
               return (
-                <div key={index}>
-                  <Link id="result-row" to={contact.github[0]}>
-                    <div id="indiv-result">
-                      GitHub: {contact.github[1]}
-                    </div>
-                  </Link>
-                </div>
+                <Link id="result-row" to={contact.github[0]}>
+                  <div id="indiv-result">
+                    GitHub: {contact.github[1]}
+                  </div>
+                </Link>
               );
             }
             if ('url' in result) {
               return (
-                <div key={index}>
-                  <Link id="result-row" to={contact.url[0]}>
-                    <div id="indiv-result">
-                      URL: {contact.url[1]}
-                    </div>
-                  </Link>
-                </div>
+                <Link id="result-row" to={contact.url[0]}>
+                  <div id="indiv-result">
+                    URL: {contact.url[1]}
+                  </div>
+                </Link>
               );
             }
             if ('linkedin' in result) {
               return (
-                <div key={index}>
-                  <Link id="result-row" to={contact.linkedin[0]}>
-                    <div id="indiv-result">
-                      LinkedIn: {contact.linkedin[1]}
-                    </div>
-                  </Link>
-                </div>
+                <Link id="result-row" to={contact.linkedin[0]}>
+                  <div id="indiv-result">
+                    LinkedIn: {contact.linkedin[1]}
+                  </div>
+                </Link>
               );
             }
             return null;
