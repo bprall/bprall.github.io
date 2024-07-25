@@ -16,6 +16,7 @@ body {
     background-color: var(--highlight-color);
     border-radius: var(--border-radius);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    margin: 0 10rem 5rem 10rem;
 }
 
 .project h3 {
