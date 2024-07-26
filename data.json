@@ -123,8 +123,8 @@
       "id": "personal-website",
       "title": "Personal Website Development",
       "type": "text",
-      "titleLink": "",
-      "titleLinkLabel": "",
+      "titleLink": "https://github.com/bprall/bprall.github.io",
+      "titleLinkLabel": "GitHub Repo",
       "description": "&emsp;For my portfolio, I developed a comprehensive personal website that serves as a central hub for information about my professional journey in software engineering. This project, which you are currently navigating, showcases my skills in web development and my ability to create dynamic, user-friendly interfaces. The website is built using a robust tech stack that includes TypeScript (TSX), React, Node.js, React Router DOM, Vite, and Firebase. Each of these technologies plays a crucial role in ensuring the site is both functional and efficient. <br> &emsp;One of the standout features of this website is its dynamic content rewriting capability....",
       "descriptionImage": "",
       "contentsImages": [
