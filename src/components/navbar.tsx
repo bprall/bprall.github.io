@@ -178,7 +178,7 @@ function RenderNavbar() {
               )}
             </li>
             <li className="nonuser-nav-item nav-item">
-              <Link className="nonuser-nav-link nav-link" to="/contact">
+              <Link className="nonuser-nav-link nav-link" to="/contact" onClick={handleOffCanvasLinkClick}>
                 {CapitalizeFirst('contact')}
               </Link>
             </li>
