@@ -12,21 +12,21 @@ Firebase
 ```
 
 # Prerequisites
-### Install NodeJs
+### Install NodeJs:
 ```
 The latest installation can be found at https://nodejs.org/en
 Make sure to also install node package manager
 ```
 
 # Commands
-### Install Dependencies
+### Install Dependencies:
 
 ```
 1. Navigate to the project directory
 2. Enter npm install
 ```
 
-### Run the Development Environment
+### Run the Development Environment:
 ```
 npm run dev
 ```
