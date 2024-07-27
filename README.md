@@ -7,7 +7,6 @@ All code was written by Blake Prall
 ```
 Node.js 20.10.0 LTS
 React + Vite
-D3.js
 Firebase
 ```
 
