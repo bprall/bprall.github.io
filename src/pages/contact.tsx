@@ -23,6 +23,10 @@ const RenderContact: React.FC = () => {
     fetchData();
   }, []);
 
+  useEffect(() => {
+    document.title = 'Blake Prall | Contact';
+  }, []);
+
   if (!contact) {
     return <p>Loading...</p>;
   }

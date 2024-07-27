@@ -1,7 +1,13 @@
+import { useEffect } from 'react';
 import TopBar from '../components/top-bar';
 import '../styles/login.css';
 
 export default function RenderSignupPending() {
+
+  useEffect(() => {
+    document.title = 'Blake Prall | About';
+  }, []);
+
   return (
     <>
         <TopBar/>

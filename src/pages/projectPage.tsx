@@ -45,6 +45,10 @@ const RenderProjectPage: React.FC = () => {
         }
     }, [id]);
 
+    useEffect(() => {
+        document.title = `Blake Prall | ${project.title}`;
+      }, [project.title]);
+
     if (loading) {
         return (
             <main>

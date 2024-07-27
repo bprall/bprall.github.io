@@ -71,6 +71,10 @@ const RenderFrontPage: React.FC = () => {
     };
   }, []);
 
+  useEffect(() => {
+    document.title = 'Blake Prall | Source Code';
+  }, []);
+
   return (
     <div id="home">
       <div className="home-header-container" id="features-header">

@@ -18,6 +18,10 @@ const RenderProjects: React.FC = () => {
       });
   }, []);
 
+  useEffect(() => {
+    document.title = 'Blake Prall | Projects';
+  }, []);
+
   const filteredProjects = projects.filter(project =>
     project.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
     project.description.toLowerCase().includes(searchTerm.toLowerCase())

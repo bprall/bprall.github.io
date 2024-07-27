@@ -21,6 +21,10 @@ const RenderAbout: React.FC = () => {
     fetchData();
   }, []);
 
+  useEffect(() => {
+    document.title = 'Blake Prall | About';
+  }, []);
+
   const filteredNews = news.filter(newsItem =>
     newsItem.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
     newsItem.date.toLowerCase().includes(searchTerm.toLowerCase())
