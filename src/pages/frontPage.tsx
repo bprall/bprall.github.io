@@ -29,6 +29,10 @@ const RenderFrontPage: React.FC = () => {
     fetchData();
   }, []);
 
+  useEffect(() => {
+    document.title = 'Blake Prall';
+  }, []);
+
   const handleIntersection = (entries: IntersectionObserverEntry[], observer: IntersectionObserver) => {
     entries.forEach((entry, index) => {
       if (entry.isIntersecting && paragraphRefs.current[index]) {
