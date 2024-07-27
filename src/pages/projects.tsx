@@ -19,7 +19,7 @@ const RenderProjects: React.FC = () => {
   }, []);
 
   useEffect(() => {
-    document.title = 'Blake Prall | Projects';
+    document.title = 'Projects | Blake Prall';
   }, []);
 
   const filteredProjects = projects.filter(project =>

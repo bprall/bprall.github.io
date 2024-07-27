@@ -5,7 +5,7 @@ import '../styles/login.css';
 export default function RenderSignupPending() {
 
   useEffect(() => {
-    document.title = 'Blake Prall | About';
+    document.title = 'Sign Up Pending | Blake Prall';
   }, []);
 
   return (

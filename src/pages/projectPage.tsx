@@ -32,7 +32,7 @@ const RenderProjectPage: React.FC = () => {
     
     useEffect(() => {
         if (project?.title) {
-            document.title = `Blake Prall | ${project.title}`;
+            document.title = `${project.title} | Blake Prall`;
         }
     }, [project]);
 

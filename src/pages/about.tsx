@@ -22,7 +22,7 @@ const RenderAbout: React.FC = () => {
   }, []);
 
   useEffect(() => {
-    document.title = 'Blake Prall | About';
+    document.title = 'About | Blake Prall';
   }, []);
 
   const filteredNews = news.filter(newsItem =>

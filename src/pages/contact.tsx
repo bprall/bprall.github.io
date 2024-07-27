@@ -24,7 +24,7 @@ const RenderContact: React.FC = () => {
   }, []);
 
   useEffect(() => {
-    document.title = 'Blake Prall | Contact';
+    document.title = 'Contact | Blake Prall';
   }, []);
 
   if (!contact) {

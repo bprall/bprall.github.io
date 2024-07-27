@@ -72,7 +72,7 @@ const RenderFrontPage: React.FC = () => {
   }, []);
 
   useEffect(() => {
-    document.title = 'Blake Prall | Source Code';
+    document.title = 'Source Code | Blake Prall';
   }, []);
 
   return (
