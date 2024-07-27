@@ -165,6 +165,32 @@
       ]
     },
     {
+      "id": "basic-dns",
+      "title": "Basic DNS Server",
+      "type": "text",
+      "titleLink": "https://github.com/bprall/Basic-DNS",
+      "titleLinkLabel": "GitHub Repo",
+      "description": "&emsp;Introducing, a simple DNS server implementation created to explore the fundamentals of Domain Name System (DNS) operations. This project includes features such as caching of DNS responses and handling recursive queries, providing a hands-on approach to understanding how DNS resolves domain names into IP addresses. Built using Java, this server showcases essential DNS functionalities while offering a practical learning experience...",
+      "descriptionImage": "https://cdn.glitch.global/3874a658-483f-41ac-b439-3b48eab1370f/dns-img.png?v=1722040052514",
+      "contentsImages": [
+  
+      ],
+      "contents": "&emsp;The Basic DNS Server project highlights a foundational DNS server written in Java. This implementation focuses on critical DNS operations, including caching mechanisms to enhance performance and recursive query handling to resolve domain names efficiently. It provides insight into the DNS resolution process and demonstrates key concepts of DNS protocol and server management.<br>&emsp;The project includes detailed documentation and code examples to facilitate understanding of DNS server functionality. With features such as caching to reduce query response times and recursive queries for resolving domain names, the Basic DNS Server serves as an educational tool for those interested in network programming and DNS infrastructure.<br>&emsp;Designed for both beginners and experienced developers, the Basic DNS Server project offers a comprehensive introduction to DNS server mechanics and serves as a stepping stone for more advanced network programming endeavors. Its clear implementation and focus on core DNS concepts make it an excellent resource for learning and experimentation."
+    },  
+    {
+      "id": "basic-http",
+      "title": "Basic HTTP Server",
+      "type": "text",
+      "titleLink": "https://github.com/bvprall/Basic-HTTP",
+      "titleLinkLabel": "GitHub Repo",
+      "description": "&emsp;Presenting, a fundamental HTTP server implementation developed in Java. This project is designed to provide a foundational understanding of HTTP protocols and server mechanics. By leveraging Java's robust networking capabilities, the server handles basic HTTP requests and responses, demonstrating core concepts such as request parsing, response generation, and basic routing. The server is built to support static content delivery and is ideal for learning and experimentation in web server development...",
+      "descriptionImage": "",
+      "contentsImages": [
+  
+      ],
+      "contents": "&emsp;The Basic HTTP Server project showcases a rudimentary yet functional HTTP server written in Java. This implementation emphasizes the fundamental aspects of HTTP communication, including handling client requests, parsing headers, and sending appropriate responses. The server is designed to support the delivery of static content and serves as a practical example for understanding how web servers operate at a basic level.<br>&emsp;The project includes features such as simple routing mechanisms and response handling for different types of HTTP requests. It serves as a hands-on learning tool for those interested in web server internals and provides a foundation for further exploration into more advanced server functionalities and optimizations.<br>&emsp;With clear code examples and thorough documentation, the Basic HTTP Server project aims to provide educational value and a starting point for developers looking to delve into server-side programming. The project's simplicity and focus on core concepts make it an excellent resource for both beginners and those seeking to refresh their understanding of HTTP server development."
+    },
+    {
       "id": "segmentation-project",
       "title": "Synaptic Segmentation via Deep Learning",
       "type": "pdf",
