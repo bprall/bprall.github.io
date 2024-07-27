@@ -44,10 +44,12 @@ const RenderProjectPage: React.FC = () => {
             fetchProjectData();
         }
     }, [id]);
-
+    
     useEffect(() => {
-        document.title = `Blake Prall | ${project.title}`;
-      }, [project.title]);
+        if (project?.title) {
+            document.title = `Blake Prall | ${project.title}`;
+        }
+    }, [project]);
 
     if (loading) {
         return (
