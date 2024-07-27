@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build && copy \"dist/index.html\" \"dist/404.html\" && copy \"data.json\" \"dist/data.json\"",
+  "build": "tsc -b && vite build && copy \"dist/index.html\" \"dist/404.html\" && copy \"data.json\" \"dist/data.json\" && powershell -Command \"Get-ChildItem -Path 'dist/assets' -Filter 'index-*.js' -Recurse | ForEach-Object { (Get-Content $_.FullName) -replace '../../data.json', '../data.json' | Set-Content $_.FullName }\"",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "predeploy": "npm run build",
