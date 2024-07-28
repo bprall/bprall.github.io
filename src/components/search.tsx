@@ -61,10 +61,17 @@ const RenderSearch: React.FC = () => {
 
   useEffect(() => {
     if (searchTerm && (searchCategory === 'Projects' || searchCategory === 'Global')) {
-      const results = projects.filter(item =>
-        item.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        item.description.toLowerCase().includes(searchTerm.toLowerCase())
-      );
+      const lowerSearchTerm = searchTerm.toLowerCase();
+      const results = projects.reduce((acc: Project[], item) => {
+        const isMatch =
+          item.title.toLowerCase().includes(lowerSearchTerm) ||
+          item.description.toLowerCase().includes(lowerSearchTerm) ||
+          item.contents.toLowerCase().includes(lowerSearchTerm);
+        if (isMatch && !acc.some(existingItem => existingItem.id === item.id)) {
+          acc.push(item);
+        }
+        return acc;
+      }, []);
       setFilteredProjectResults(results);
     } else {
       setFilteredProjectResults([]);

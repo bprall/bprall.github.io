@@ -118,7 +118,7 @@
       "type": "text",
       "titleLink": "https://github.com/bprall/bprall.github.io",
       "titleLinkLabel": "GitHub Repo",
-      "description": "&emsp;For my portfolio, I developed a comprehensive personal website that serves as a central hub for information about my professional journey in software engineering. This project, which you are currently navigating, showcases my skills in web development and my ability to create dynamic, user-friendly interfaces. The website is built using a robust tech stack that includes TypeScript (TSX), React, Node.js, React Router DOM, Vite, and Firebase. Each of these technologies plays a crucial role in ensuring the site is both functional and efficient. <br> &emsp;One of the standout features of this website is its dynamic content rewriting capability....",
+      "description": "personal website portfolio web development TypeScript TSX React Node.js React Router DOM Vite Firebase dynamic content real-time updates responsive design CSS Grid off-canvas navbar global search functionality versatile search JSON file content management security user authentication login scalable solution user experience web application professional experience technical expertise My personal website based in React. html css typescript javascript website portfolio personal react reactjs react.js vite json node nodejs node.js dynamic content loading React Router DOM dynamic page generation grid flex offcanvas custom logo",
       "descriptionImage": "",
       "frontPageDesc": "My personal website based in React.",
       "contentsImages": [
@@ -133,7 +133,7 @@
       "siteLink": "https://budgetapp-8ac58.web.app/",
       "titleLink": "https://github.com/leddyd/BudgetApp",
       "titleLinkLabel": "GitHub Repo",
-      "description": "&emsp;Introducing Distant Dollar, a budgeting application meticulously crafted by the collaborative efforts of Blake Prall and Dylan Leddy. This groundbreaking financial tool is a testament to the prowess of modern web development, employing a robust technology stack to deliver a seamless and secure budgeting experience. The utilization of React and TypeScript (TSX) ensures a modular and maintainable codebase, while D3 brings dynamic and interactive charts to the forefront, providing users with visually compelling insights into their financial data...",
+      "description": "budgeting app financial tool React TypeScript TSX D3 interactive charts Firebase user authentication Firestore NoSQL database real-time synchronization data storage user interface budget tracking expense categorization financial goals user empowerment personal finance management web development security modular codebase dynamic charts collaborative development user experience financial insights Web application for budgeting built with React & D3. d3 d3.js d3js firebase firestore login signup google signup html css typescript javascript website portfolio personal react reactjs react.js vite json node nodejs node.js dynamic content loading React Router DOM dynamic page generation flex custom logo",
       "descriptionImage": "https://cdn.glitch.global/3874a658-483f-41ac-b439-3b48eab1370f/distantdollar-Capture1.JPG?v=1721778684432",
       "frontPageDesc": "Web application for budgeting built with React & D3.",
       "contentsImages": [
@@ -147,7 +147,7 @@
       "type": "pdf",
       "titleLink": "https://github.com/bprall/CNN-LSTM-CTC-Automatic-Speech-Recognition",
       "titleLinkLabel": "GitHub Repo",
-      "description": "&emsp;In this project, we present a Speech-to-Text model employing a combination of Convolutional Neural Networks (CNNs) and Long Short-Term Memory networks (LSTMs). Trained on the <q>train-clean-100</q> subset of the LIBRISPEECH dataset, our model transforms audio waveforms into spectrograms using MelSpectrogram transformation. To enhance robustness, we apply data augmentation techniques such as frequency masking and time masking. The model's architecture captures both local frequency patterns and temporal dynamics, crucial for accurate speech recognition. We employ the AdamW optimizer and utilize the Connectionist Temporal Classification (CTC) loss function to train our model, addressing challenges associated with variable-length sequences. Evaluation metrics include Character Error Rate (CER) and Word Error Rate (WER). Despite challenges, our model showcases promising performance in automatic speech recognition...</p>",
+      "description": "ASR automatic speech recognition CNN convolutional neural network LSTM long short-term memory CTC connectionist temporal classification audio processing speech-to-text model deep learning feature extraction sequence-to-sequence learning speech features time-series data acoustic modeling text transcription neural network architecture speech recognition training inference voice recognition machine learning data augmentation feature maps recurrent layers attention mechanism CTC loss function speech dataset training data phoneme recognition language modeling acoustic features paper machine learning Automatic Speech Recognition Program via deep machine learning. python scripts cer wer pytorch deep learning machine learning asr",
       "descriptionImage": "https://cdn.glitch.global/3874a658-483f-41ac-b439-3b48eab1370f/Capture.JPG?v=1721782400085",
       "frontPageDesc": "Automatic Speech Recognition Program via deep machine learning.",
       "contentsImages": [
@@ -167,7 +167,7 @@
       "type": "text",
       "titleLink": "https://github.com/bprall/Basic-DNS",
       "titleLinkLabel": "GitHub Repo",
-      "description": "&emsp;Introducing, a simple DNS server implementation created to explore the fundamentals of Domain Name System (DNS) operations. This project includes features such as caching of DNS responses and handling recursive queries, providing a hands-on approach to understanding how DNS resolves domain names into IP addresses. Built using Java, this server showcases essential DNS functionalities while offering a practical learning experience...",
+      "description": "basic DNS server Java caching recursive queries zone files TTL query handling response forwarding upstream servers request forwarding DNS records customizable zone file caching mechanism server configuration server setup query resolution network communication DNS message parsing DNS record definition DNS caching Java Instant class request handling DNS zone management build script Makefile example zone file DNS server class HTTP server response output dig command testing network protocols DNS query response handling server-side scripting caching records TTL management DNS query forwarding DNS server files java dig routing ip ipv4 Basic Java-based DNS server handling recursive queries and caching.",
       "descriptionImage": "https://cdn.glitch.global/3874a658-483f-41ac-b439-3b48eab1370f/dns-img.png?v=1722040052514",
       "frontPageDesc": "Basic Java-based DNS server handling recursive queries and caching.",
       "contentsImages": [
@@ -181,7 +181,7 @@
       "type": "text",
       "titleLink": "https://github.com/bprall/Basic-HTTP",
       "titleLinkLabel": "GitHub Repo",
-      "description": "&emsp;Presenting, a fundamental HTTP server implementation developed in Java. This project is designed to provide a foundational understanding of HTTP protocols and server mechanics. By leveraging Java's robust networking capabilities, the server handles basic HTTP requests and responses, demonstrating core concepts such as request parsing, response generation, and basic routing. The server is built to support static content delivery and is ideal for learning and experimentation in web server development...",
+      "description": "Basic Java-based HTTP server handling GET requests. HTTP server GET requests web server routing request handling response handling server-side programming REST API URL endpoints request parsing response formatting status codes request headers response headers server configuration middleware logging error handling server-side scripting protocols TCP/IP sockets HTTP methods request handling routing framework lightweight server request processing response generation server logic concurrency threading asynchronous processing network communication error handling request validation server response headers HTTP status codes network protocols server architecture",
       "descriptionImage": "",
       "frontPageDesc": "Basic Java-based HTTP server handling GET requests.",
       "contentsImages": [
@@ -195,7 +195,7 @@
       "type": "pdf",
       "titleLink": "https://github.com/bprall/CREMI-Neuron-Cleft-Segmentation",
       "titleLinkLabel": "GitHub Repo",
-      "description": "&emsp;I am interested in the idea of mapping the human connectome through the use of deep-learning neural networks. Despite being the system by which we experience the world and the foundation of consciousness, we still know surprisingly little about the central nervous system due to its vast complexity. Connectomics aims to change that by directly mapping these circuits. There are multiple aspects that go into this challenging task, most regarding the segmentation of individual neurons in order to generate a volumetric representation of neural circuitry.<br>&emsp;In my project, I aim to develop a neural network or system of networks that can synaptic clefts. I hypothesize that a U-Net3D-like architecture that predicts 3D bounding boxes of individual neurons from encoder feature maps, which then generates a neuron instance segmentation map through the decoder layers, alongside an FCN that predicts synapses will best complete this task... </p>",
+      "description": "scikit-learn cv2 deep learning synaptic segmentation convolutional neural network CNN image segmentation neural network training model accuracy loss function dataset preprocessing augmentation feature extraction segmentation masks class activation maps backpropagation optimization hyperparameters overfitting regularization dropout transfer learning fine-tuning epochs batch size learning rate activation functions pooling layers convolutional layers filters kernels architecture design feature maps classification object detection data augmentation evaluation metrics precision recall F1 score cross-validation performance metrics GPU acceleration tensor operations PyTorch implementation software libraries paper pytorch python scripts machine learning Synaptic Cleft Segmentation via CNN.",
       "descriptionImage": "https://cdn.glitch.global/3874a658-483f-41ac-b439-3b48eab1370f/Capture.JPG?v=1721782203647",
       "frontPageDesc": "Synaptic Cleft Segmentation via CNN.",
       "contentsImages": [
@@ -215,7 +215,7 @@
       "type": "text",
       "titleLink": "",
       "titleLinkLabel": "",
-      "description": "&emsp;Creating a mobile game emulator using a Raspberry Pi was a project I undertook just for fun. The idea of being able to transform a small, affordable computer like the Raspberry Pi into a mobile platform that could play classic games sounded awesome. It was a challenging yet rewarding journey that allowed me to explore my passion for both gaming and tinkering with technology.<br>&emsp;The first step in this endeavor was selecting the right Raspberry Pi model and gathering the necessary components. After some research, I settled on the Raspberry Pi 4 for its improved processing power and versatility. Then, I acquired a high-quality microSD card to store the emulator software and game ROMs and a power supply.<br>&emsp;But I didn't stop there...",
+      "description": "emulator mobile game development architecture reverse engineering debugging performance optimization cross-platform compatibility source code custom firmware virtual machine ROMs APIs input handling graphics rendering sound emulation scripting tools hardware abstraction user interface testing debugging tools compatibility layers game engine customization game preservation software development open source contributions gaming community emulator features configuration settings performance metrics",
       "descriptionImage": "",
       "frontPageDesc": "Mobile game emulator made with a Raspberry Pi.",
       "contentsImages": [
