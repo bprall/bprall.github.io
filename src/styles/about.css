@@ -28,6 +28,12 @@
     padding: 20px;
     background-color: var(--background-color);
     color: var(--text-color);
+    width: 100%;
+    max-width: 90rem;
+    margin: 0 auto;
+    margin-top: 5rem;
+    padding: 0 2rem; 
+    box-sizing: border-box;
 }
   
 .left-side, .right-side {
