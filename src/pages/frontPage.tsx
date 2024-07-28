@@ -78,7 +78,7 @@ const RenderFrontPage: React.FC = () => {
           </div>
         </div>
       ) : (
-          <p>Loading...</p>
+          <div/>
       )}
       <div id="home-content-container">
         <section className="home-section-container">
@@ -113,7 +113,7 @@ const RenderFrontPage: React.FC = () => {
               ))}
             </div>
           ) : (
-            <p>No content available</p>
+            <div/>
           )}
         </section>
         <section className="home-section-container">
@@ -135,7 +135,7 @@ const RenderFrontPage: React.FC = () => {
                 ))}
               </ul>
           ) : (
-            <p>No content available</p>
+            <div/>
           )}
         </section>
         <section className="home-section-container">
@@ -164,7 +164,7 @@ const RenderFrontPage: React.FC = () => {
               </div>
             ))
           ) : (
-            <p>No content available</p>
+            <div/>
           )}
         </section>
       </div>
