@@ -11,6 +11,7 @@ export interface Project {
     titleLinkLabel: string;
     description: string;
     descriptionImage?: string;
+    frontPageDesc?: string;
     contentImages?: string[];
     contents?: string;
     materials?: ProjectMaterial[];
@@ -28,6 +29,11 @@ export interface About {
   }[];
 }
 
+export interface FrontPageHeader {
+  title: string;
+  text: string[];
+}
+
 export interface FrontPageContact {
   contactName: string;
   shortSummary: string;
@@ -41,6 +47,7 @@ export interface FrontPageParagraph {
 }
 
 export interface FrontPage {
+  header: FrontPageHeader;
   contact: FrontPageContact;
   paragraphs: FrontPageParagraph[];
 }

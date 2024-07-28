@@ -1,6 +1,13 @@
 {
-  "cv": "https://cdn.glitch.global/3874a658-483f-41ac-b439-3b48eab1370f/blakeprall_long.pdf?v=1721805034709",
+  "cv": "https://cdn.glitch.global/3874a658-483f-41ac-b439-3b48eab1370f/blakeprall_long.pdf?v=1722053867169",
   "frontPage": {
+    "header":{
+      "title": "Welcome,",
+      "text": [
+        "I’m Blake, and this is my portfolio showcasing my skills and projects as I pursue a career in software engineering.",
+        "On this site, you can explore the <a href=\"/projects\">projects</a> I’ve completed, or read a bit <a href=\"/about\">about me</a>."
+      ]
+    },
     "contact": {
       "contactName": "Blake Prall",
       "shortSummary": "Blake is a recent graduate from Boston College with a double major in computer science and neuroscience.",
@@ -127,6 +134,7 @@
       "titleLinkLabel": "GitHub Repo",
       "description": "&emsp;For my portfolio, I developed a comprehensive personal website that serves as a central hub for information about my professional journey in software engineering. This project, which you are currently navigating, showcases my skills in web development and my ability to create dynamic, user-friendly interfaces. The website is built using a robust tech stack that includes TypeScript (TSX), React, Node.js, React Router DOM, Vite, and Firebase. Each of these technologies plays a crucial role in ensuring the site is both functional and efficient. <br> &emsp;One of the standout features of this website is its dynamic content rewriting capability....",
       "descriptionImage": "",
+      "frontPageDesc": "My personal website based in React.",
       "contentsImages": [
 
       ],
@@ -140,6 +148,7 @@
       "titleLinkLabel": "GitHub Repo",
       "description": "&emsp;Introducing <a href=\"https://budgetapp-8ac58.web.app/\" target=\"_blank\">Distant Dollar</a>, a budgeting application meticulously crafted by the collaborative efforts of Blake Prall and Dylan Leddy. This groundbreaking financial tool is a testament to the prowess of modern web development, employing a robust technology stack to deliver a seamless and secure budgeting experience. The utilization of React and TypeScript (TSX) ensures a modular and maintainable codebase, while D3 brings dynamic and interactive charts to the forefront, providing users with visually compelling insights into their financial data...",
       "descriptionImage": "https://cdn.glitch.global/3874a658-483f-41ac-b439-3b48eab1370f/distantdollar-Capture1.JPG?v=1721778684432",
+      "frontPageDesc": "Web application for budgeting built with React & D3.",
       "contentsImages": [
 
       ],
@@ -153,6 +162,7 @@
       "titleLinkLabel": "GitHub Repo",
       "description": "&emsp;In this project, we present a Speech-to-Text model employing a combination of Convolutional Neural Networks (CNNs) and Long Short-Term Memory networks (LSTMs). Trained on the <q>train-clean-100</q> subset of the LIBRISPEECH dataset, our model transforms audio waveforms into spectrograms using MelSpectrogram transformation. To enhance robustness, we apply data augmentation techniques such as frequency masking and time masking. The model's architecture captures both local frequency patterns and temporal dynamics, crucial for accurate speech recognition. We employ the AdamW optimizer and utilize the Connectionist Temporal Classification (CTC) loss function to train our model, addressing challenges associated with variable-length sequences. Evaluation metrics include Character Error Rate (CER) and Word Error Rate (WER). Despite challenges, our model showcases promising performance in automatic speech recognition...</p>",
       "descriptionImage": "https://cdn.glitch.global/3874a658-483f-41ac-b439-3b48eab1370f/Capture.JPG?v=1721782400085",
+      "frontPageDesc": "Automatic Speech Recognition Program via deep machine learning.",
       "contentsImages": [
 
       ],
@@ -172,6 +182,7 @@
       "titleLinkLabel": "GitHub Repo",
       "description": "&emsp;Introducing, a simple DNS server implementation created to explore the fundamentals of Domain Name System (DNS) operations. This project includes features such as caching of DNS responses and handling recursive queries, providing a hands-on approach to understanding how DNS resolves domain names into IP addresses. Built using Java, this server showcases essential DNS functionalities while offering a practical learning experience...",
       "descriptionImage": "https://cdn.glitch.global/3874a658-483f-41ac-b439-3b48eab1370f/dns-img.png?v=1722040052514",
+      "frontPageDesc": "Basic Java-based DNS server handling recursive queries and caching.",
       "contentsImages": [
   
       ],
@@ -185,6 +196,7 @@
       "titleLinkLabel": "GitHub Repo",
       "description": "&emsp;Presenting, a fundamental HTTP server implementation developed in Java. This project is designed to provide a foundational understanding of HTTP protocols and server mechanics. By leveraging Java's robust networking capabilities, the server handles basic HTTP requests and responses, demonstrating core concepts such as request parsing, response generation, and basic routing. The server is built to support static content delivery and is ideal for learning and experimentation in web server development...",
       "descriptionImage": "",
+      "frontPageDesc": "Basic Java-based HTTP server handling GET requests.",
       "contentsImages": [
   
       ],
@@ -198,6 +210,7 @@
       "titleLinkLabel": "GitHub Repo",
       "description": "&emsp;I am interested in the idea of mapping the human connectome through the use of deep-learning neural networks. Despite being the system by which we experience the world and the foundation of consciousness, we still know surprisingly little about the central nervous system due to its vast complexity. Connectomics aims to change that by directly mapping these circuits. There are multiple aspects that go into this challenging task, most regarding the segmentation of individual neurons in order to generate a volumetric representation of neural circuitry.<br>&emsp;In my project, I aim to develop a neural network or system of networks that can synaptic clefts. I hypothesize that a U-Net3D-like architecture that predicts 3D bounding boxes of individual neurons from encoder feature maps, which then generates a neuron instance segmentation map through the decoder layers, alongside an FCN that predicts synapses will best complete this task... </p>",
       "descriptionImage": "https://cdn.glitch.global/3874a658-483f-41ac-b439-3b48eab1370f/Capture.JPG?v=1721782203647",
+      "frontPageDesc": "Synaptic Cleft Segmentation via CNN.",
       "contentsImages": [
 
       ],
@@ -217,6 +230,7 @@
       "titleLinkLabel": "",
       "description": "&emsp;Creating a mobile game emulator using a Raspberry Pi was a project I undertook just for fun. The idea of being able to transform a small, affordable computer like the Raspberry Pi into a mobile platform that could play classic games sounded awesome. It was a challenging yet rewarding journey that allowed me to explore my passion for both gaming and tinkering with technology.<br>&emsp;The first step in this endeavor was selecting the right Raspberry Pi model and gathering the necessary components. After some research, I settled on the Raspberry Pi 4 for its improved processing power and versatility. Then, I acquired a high-quality microSD card to store the emulator software and game ROMs and a power supply.<br>&emsp;But I didn't stop there...",
       "descriptionImage": "",
+      "frontPageDesc": "Mobile game emulator made with a Raspberry Pi.",
       "contentsImages": [
 
       ],

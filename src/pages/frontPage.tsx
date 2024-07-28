@@ -1,13 +1,13 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import { Link } from 'react-router-dom';
-import DateClock from '../components/dateClock';
-import { FrontPageParagraph, FrontPageContact } from '../utils/interfaces';
+import { FrontPageHeader, FrontPageContact, Project, NewsItem, FrontPageParagraph } from '../utils/interfaces';
 
 const RenderFrontPage: React.FC = () => {
-
+  const [news, setNews] = useState<NewsItem[]>([]);
+  const [projects, setProjects] = useState<Project[]>([]);
+  const [header, setHeader] = useState<FrontPageHeader>(null);
+  const [contact, setContact] = useState<FrontPageContact>(null);
   const [paragraphs, setParagraphs] = useState<FrontPageParagraph[]>([]);
-  const [contact, setContact] = useState<FrontPageContact | null>(null);
-  const [isFixed, setIsFixed] = useState(false);
 
   const paragraphRefs = useRef<HTMLDivElement[]>([]);
 
@@ -19,13 +19,16 @@ const RenderFrontPage: React.FC = () => {
           throw new Error('Network response was not ok');
         }
         const data = await response.json();
-        setContact(data.frontPage.contact || null);
+        setHeader(data.frontPage.header);
+        setContact(data.frontPage.contact);
         setParagraphs(data.frontPage.paragraphs || []);
+        setProjects(data.projects || []);
+        setNews(data.news || []);
       } catch (error) {
         console.error('Error fetching data:', error);
       }
     };
-  
+
     fetchData();
   }, []);
 
@@ -62,64 +65,108 @@ const RenderFrontPage: React.FC = () => {
     };
   }, [paragraphs]);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollTop = window.scrollY;
-      setIsFixed(scrollTop > 48); 
-    };
-
-    window.addEventListener('scroll', handleScroll);
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
-
   return (
     <div id="home">
-      <div className="home-header-container" id="features-header">
-        <div>
-          <p>My Personal Site</p>
-          <h1>Blake Prall</h1>
+      {header ? (
+        <div id="home-header-container">
+          <div>
+            <p id="home-title">{header ? header.title : ''}</p>
+          </div>
+          <div id="home-header-text">
+            <p dangerouslySetInnerHTML={{ __html: header.text[0] || '' }} />
+            <p dangerouslySetInnerHTML={{ __html: header.text[1] || '' }} />
+          </div>
         </div>
-      </div>
+      ) : (
+          <p>Loading...</p>
+      )}
       <div id="home-content-container">
-        <div id="home-text-container">
+        <section className="home-section-container">
+          <div className="home-section-header">
+            <p>Projects</p>
+            <Link to="/projects">
+              <button>All Projects</button>
+            </Link>
+          </div>
+          {projects.length > 0 ? (
+            <div className="home-projects-grid">
+              {projects.slice(0,6).map((project) => (
+                <div className="home-card" key={project.id}>
+                  <div className="home-card-content">
+                    <h2 className="home-card-title">{project.title}</h2>
+                    <p className="home-card-description">{project.frontPageDesc || project.description}</p>
+                    <div className="home-card-buttons">
+                      <Link to={`/projects/${project.id}`} className="home-card-button">Page</Link>
+                      {project.titleLink && (
+                        <a href={project.titleLink} className="home-card-button" target="_blank" rel="noopener noreferrer">
+                          Source
+                        </a>
+                      )}
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          ) : (
+            <p>No content available</p>
+          )}
+        </section>
+        <section className="home-section-container">
+          <div className="home-section-header">
+            <p>News</p>
+            <Link to="/news">
+              <button>All News</button>
+            </Link>
+          </div>
+          {news.length > 0 ? (
+            <ul id="home-news-list">
+                {news.slice(0,10).map((item, index) => (
+                  <a href="/about" className="home-news-row-link" key={index}>
+                    <div className="home-news-row">
+                      <div className="home-news-title">{item.title}</div>
+                      <div className="home-news-date">{item.date}</div>
+                    </div>
+                  </a>
+                ))}
+              </ul>
+          ) : (
+            <p>No content available</p>
+          )}
+        </section>
+        <section className="home-section-container">
           {paragraphs.length > 0 ? (
             paragraphs.map((paragraph, index) => (
               <div
-                className="home-card"
+                className="home-paragraph-card"
                 key={index}
                 ref={(el) => paragraphRefs.current[index] = el!}
               >
                 <div className="hover-bar"></div>
                 {paragraph.link ? (
-                  <Link to={paragraph.link} className="home-card-link">
-                    <p className="home-card-title">{paragraph.title}</p>
-                  </Link>
+                  <div className="home-section-header">
+                    <Link to={paragraph.link} className="home-card-link">
+                      <p>{paragraph.title}</p>
+                    </Link>
+                  </div>
                 ) : (
-                  <p className="home-card-title">{paragraph.title}</p>
+                  <div className="home-section-header">
+                    <p className="home-section-header">{paragraph.title}</p>
+                  </div>
                 )}
-                <p className="home-card-content">{paragraph.content}</p>
+                <div className='home-paragraph-content'>
+                  <p>{paragraph.content}</p>
+                </div>
               </div>
             ))
           ) : (
             <p>No content available</p>
           )}
-        </div>
-        <div
-          id="date-clock-container"
-          className={isFixed ? 'fixed' : ''}
-        >
-          <DateClock />
-        </div>
+        </section>
       </div>
       {contact && (
-        <section id='contact-me'>
-          <div className="home-header-container" id="about-header">
-            <div>
-              <h3>Contact Me</h3>
-            </div>
+        <section className="home-section-container">
+          <div className='home-section-header'>
+            <p>Contact Me</p>
           </div>
           <div id="about">
             <Link to="/contact" className="about-card">
