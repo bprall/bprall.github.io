@@ -5,9 +5,10 @@ import { FrontPageHeader, FrontPageContact, Project, NewsItem, FrontPageParagrap
 const RenderFrontPage: React.FC = () => {
   const [news, setNews] = useState<NewsItem[]>([]);
   const [projects, setProjects] = useState<Project[]>([]);
-  const [header, setHeader] = useState<FrontPageHeader>(null);
-  const [contact, setContact] = useState<FrontPageContact>(null);
+  const [header, setHeader] = useState<FrontPageHeader | null>(null);
+  const [contact, setContact] = useState<FrontPageContact | null>(null);
   const [paragraphs, setParagraphs] = useState<FrontPageParagraph[]>([]);
+  const [loading, setLoading] = useState<boolean>(true);
 
   const paragraphRefs = useRef<HTMLDivElement[]>([]);
 
@@ -26,6 +27,8 @@ const RenderFrontPage: React.FC = () => {
         setNews(data.news || []);
       } catch (error) {
         console.error('Error fetching data:', error);
+      } finally {
+        setLoading(false);
       }
     };
 
@@ -65,20 +68,22 @@ const RenderFrontPage: React.FC = () => {
     };
   }, [paragraphs]);
 
+  if (loading) {
+    return <div/>;
+  }
+
   return (
     <div id="home">
-      {header ? (
+      {header && (
         <div id="home-header-container">
           <div>
-            <p id="home-title">{header ? header.title : ''}</p>
+            <p id="home-title">{header.title}</p>
           </div>
           <div id="home-header-text">
             <p dangerouslySetInnerHTML={{ __html: header.text[0] || '' }} />
             <p dangerouslySetInnerHTML={{ __html: header.text[1] || '' }} />
           </div>
         </div>
-      ) : (
-          <div/>
       )}
       <div id="home-content-container">
         <section className="home-section-container">
@@ -88,9 +93,9 @@ const RenderFrontPage: React.FC = () => {
               <button>All Projects</button>
             </Link>
           </div>
-          {projects.length > 0 ? (
+          {projects.length > 0 && (
             <div className="home-projects-grid">
-              {projects.slice(0,6).map((project) => (
+              {projects.slice(0, 6).map((project) => (
                 <div className="home-card" key={project.id}>
                   <div className="home-card-content">
                     <h2 className="home-card-title">{project.title}</h2>
@@ -104,16 +109,14 @@ const RenderFrontPage: React.FC = () => {
                       )}
                       {project.siteLink && (
                         <a href={project.siteLink} className="home-card-button" target="_blank" rel="noopener noreferrer">
-                        Visit
-                      </a>
+                          Visit
+                        </a>
                       )}
                     </div>
                   </div>
                 </div>
               ))}
             </div>
-          ) : (
-            <div/>
           )}
         </section>
         <section className="home-section-container">
@@ -123,23 +126,21 @@ const RenderFrontPage: React.FC = () => {
               <button>All News</button>
             </Link>
           </div>
-          {news.length > 0 ? (
+          {news.length > 0 && (
             <ul id="home-news-list">
-                {news.slice(0,10).map((item, index) => (
-                  <a href="/about" className="home-news-row-link" key={index}>
-                    <div className="home-news-row">
-                      <div className="home-news-title">{item.title}</div>
-                      <div className="home-news-date">{item.date}</div>
-                    </div>
-                  </a>
-                ))}
-              </ul>
-          ) : (
-            <div/>
+              {news.slice(0, 10).map((item, index) => (
+                <a href="/about" className="home-news-row-link" key={index}>
+                  <div className="home-news-row">
+                    <div className="home-news-title">{item.title}</div>
+                    <div className="home-news-date">{item.date}</div>
+                  </div>
+                </a>
+              ))}
+            </ul>
           )}
         </section>
         <section className="home-section-container">
-          {paragraphs.length > 0 ? (
+          {paragraphs.length > 0 && (
             paragraphs.map((paragraph, index) => (
               <div
                 className="home-paragraph-card"
@@ -163,8 +164,6 @@ const RenderFrontPage: React.FC = () => {
                 </div>
               </div>
             ))
-          ) : (
-            <div/>
           )}
         </section>
       </div>
