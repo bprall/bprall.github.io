@@ -100,19 +100,19 @@ const RenderFrontPage: React.FC = () => {
                   <div className="home-card-content">
                     <h2 className="home-card-title">{project.title}</h2>
                     <p className="home-card-description">{project.frontPageDesc || project.description}</p>
-                    <div className="home-card-buttons">
-                      <Link to={`/projects/${project.id}`} className="home-card-button">Page</Link>
-                      {project.titleLink && (
-                        <a href={project.titleLink} className="home-card-button" target="_blank" rel="noopener noreferrer">
-                          Source
-                        </a>
-                      )}
-                      {project.siteLink && (
-                        <a href={project.siteLink} className="home-card-button" target="_blank" rel="noopener noreferrer">
+                  </div>
+                  <div className="home-card-buttons">
+                    <Link to={`/projects/${project.id}`} className="home-card-button">Page</Link>
+                    {project.titleLink && (
+                      <a href={project.titleLink} className="home-card-button" target="_blank" rel="noopener noreferrer">
+                        Source
+                      </a>
+                    )}
+                    {project.siteLink && (
+                      <a href={project.siteLink} className="home-card-button" target="_blank" rel="noopener noreferrer">
                           Visit
-                        </a>
-                      )}
-                    </div>
+                      </a>
+                    )}
                   </div>
                 </div>
               ))}

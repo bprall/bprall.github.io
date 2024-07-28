@@ -9,8 +9,15 @@ lerna-debug.log*
 
 node_modules
 dist
+build
 dist-ssr
 *.local
+
+#Ignore Firebase
+.firbase
+firebaseConfig.ts
+firebase.json
+.firebaserc
 
 # Editor directories and files
 .vscode/*
