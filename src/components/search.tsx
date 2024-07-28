@@ -1,10 +1,11 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { Form, FormControl, Button, Dropdown } from 'react-bootstrap';
-import { Project, About, Contact, FrontPageParagraph, FrontPageContact, NewsItem } from '../utils/interfaces';
+import { Project, About, Contact, FrontPageHeader, FrontPageParagraph, FrontPageContact, NewsItem } from '../utils/interfaces';
 
 const RenderSearch: React.FC = () => {
   const [homeParagraph, setHomeParagraph] = useState<FrontPageParagraph[]>([]);
+  const [homeHeader, setHomeHeader] = useState<FrontPageHeader>(null);
   const [homeContact, setHomeContact] = useState<FrontPageContact>(null);
   const [about, setAbout] = useState<About | null>(null);
   const [news, setNews] = useState<NewsItem[]>([]);
@@ -13,7 +14,7 @@ const RenderSearch: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState<string>('');
   const [searchCategory, setSearchCategory] = useState<string>('Global');
   const [filteredProjectResults, setFilteredProjectResults] = useState<Project[]>([]);
-  const [filteredHomeResults, setFilteredHomeResults] = useState<(FrontPageParagraph | FrontPageContact)[]>([]);
+  const [filteredHomeResults, setFilteredHomeResults] = useState<(FrontPageParagraph | FrontPageContact | FrontPageHeader | NewsItem | Project)[]>([]);
   const [filteredAboutResults, setFilteredAboutResults] = useState<(About | NewsItem)[]>([]);
   const [filteredContactResults, setFilteredContactResults] = useState<Partial<Contact> | null>(null);
   const [showResults, setShowResults] = useState(false);
@@ -26,6 +27,7 @@ const RenderSearch: React.FC = () => {
         const data = await response.json();
         setHomeParagraph(data.frontPage.paragraphs || []);
         setHomeContact(data.frontPage.contact || null);
+        setHomeHeader(data.frontPage.header || null);
         setAbout(data.about || null);
         setNews(data.news || []);
         setProjects(data.projects || []);
@@ -75,18 +77,36 @@ const RenderSearch: React.FC = () => {
         item.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
         item.content.toLowerCase().includes(searchTerm.toLowerCase())
       ) : [];
+      
       const contactResults = homeContact ? [
         homeContact
       ].filter(item =>
         item.contactName.toLowerCase().includes(searchTerm.toLowerCase()) ||
         item.shortSummary.toLowerCase().includes(searchTerm.toLowerCase())
       ) : null;
-      const combinedResults = [...paragraphResults, ...contactResults];
+      
+      const headerResults = homeHeader && (
+        homeHeader.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        homeHeader.text.some(text => text.toLowerCase().includes(searchTerm.toLowerCase()))
+      ) ? [homeHeader] : [];
+
+      const newsResults = news.slice(0,10).filter(item =>
+        item.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        item.date.toLowerCase().includes(searchTerm.toLowerCase())
+      );
+
+      const projectResults = projects.filter(item =>
+        item.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        item.frontPageDesc.toLowerCase().includes(searchTerm.toLowerCase())
+      );
+
+      const combinedResults = [...paragraphResults, ...contactResults, ...headerResults, ...newsResults, ...projectResults];
+    
       setFilteredHomeResults(combinedResults);
     } else {
       setFilteredHomeResults([]);
     }
-  }, [searchTerm, homeParagraph, homeContact, searchCategory]);
+  }, [searchTerm, homeParagraph, homeContact, homeHeader, news, projects, searchCategory]);
 
   useEffect(() => {
     if (searchTerm && (searchCategory === 'About' || searchCategory === 'Global')) {
