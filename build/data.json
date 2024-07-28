@@ -4,8 +4,8 @@
     "header":{
       "title": "Welcome,",
       "text": [
-        "I’m Blake, and this is my portfolio showcasing my skills and projects as I pursue a career in software engineering.",
-        "On this site, you can explore the <a href=\"/projects\">projects</a> I’ve completed, or read a bit <a href=\"/about\">about me</a>."
+        "I'm Blake, and this is my portfolio showcasing my skills and projects as I pursue a career in software engineering.",
+        "On this site, you can explore the <a href=\"/projects\">projects</a> I've completed, or read a bit <a href=\"/about\">about me</a>."
       ]
     },
     "contact": {
@@ -41,11 +41,11 @@
       },
       {
         "title": "Personal Growth",
-        "content": "There was a period of uncertainty in my life when I wasn’t sure what career path to pursue, which led me to forgo internships. This phase, however, was crucial for my personal growth. It allowed me to explore different interests and ultimately helped me realize my passion for technology and problem-solving. These experiences have shaped my approach to challenges and my determination to succeed in my chosen field. I learned the value of perseverance and the importance of staying open to new opportunities. This period of self-discovery also taught me to trust my instincts and follow my passions, even when the path ahead is not always clear."
+        "content": "There was a period of uncertainty in my life when I wasn't sure what career path to pursue, which led me to forgo internships. This phase, however, was crucial for my personal growth. It allowed me to explore different interests and ultimately helped me realize my passion for technology and problem-solving. These experiences have shaped my approach to challenges and my determination to succeed in my chosen field. I learned the value of perseverance and the importance of staying open to new opportunities. This period of self-discovery also taught me to trust my instincts and follow my passions, even when the path ahead is not always clear."
       },
       {
         "title": "Future Aspirations",
-        "content": "Looking ahead, I am excited about the possibilities in the tech industry. My goal is to leverage my background in neuroscience and computer science to develop innovative solutions that can make a meaningful impact. I am particularly interested in areas such as artificial intelligence and data science. I am eager to continue learning and growing, and I look forward to contributing to projects that push the boundaries of technology. I am passionate about using technology to solve real-world problems and improve people’s lives. Whether it’s developing new algorithms to analyze complex data or creating applications that enhance user experiences, I am committed to making a positive difference through my work."
+        "content": "Looking ahead, I am excited about the possibilities in the tech industry. My goal is to leverage my background in neuroscience and computer science to develop innovative solutions that can make a meaningful impact. I am particularly interested in areas such as artificial intelligence and data science. I am eager to continue learning and growing, and I look forward to contributing to projects that push the boundaries of technology. I am passionate about using technology to solve real-world problems and improve people's lives. Whether it's developing new algorithms to analyze complex data or creating applications that enhance user experiences, I am committed to making a positive difference through my work."
       }
     ]
   },

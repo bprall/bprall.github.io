@@ -7,6 +7,7 @@ export interface Project {
     id: string;
     title: string;
     type: string;
+    siteLink?: string;
     titleLink: string;
     titleLinkLabel: string;
     description: string;

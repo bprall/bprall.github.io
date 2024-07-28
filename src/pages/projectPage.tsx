@@ -76,7 +76,9 @@ const RenderProjectPage: React.FC = () => {
                         scrolling="yes"
                     ></iframe>
                 ) : (
-                    <div className='project-text' dangerouslySetInnerHTML={{ __html: project.contents || '' }} />
+                    <div className="project-text-container">
+                        <div className='project-text' dangerouslySetInnerHTML={{ __html: project.contents || '' }} />
+                    </div>
                 )}
             </section>
         </main>

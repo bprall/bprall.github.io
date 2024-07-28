@@ -102,6 +102,11 @@ const RenderFrontPage: React.FC = () => {
                           Source
                         </a>
                       )}
+                      {project.siteLink && (
+                        <a href={project.siteLink} className="home-card-button" target="_blank" rel="noopener noreferrer">
+                        Visit
+                      </a>
+                      )}
                     </div>
                   </div>
                 </div>
@@ -172,8 +177,12 @@ const RenderFrontPage: React.FC = () => {
             <Link to="/contact" className="about-card">
               <div className="hover-bar"></div>
               <img id="contact-photo" src={contact.photo} alt={`${contact.contactName}'s photo`} />
-              <h4>{contact.contactName}<i className="bi bi-chevron-right"></i></h4>
-              <p>{contact.shortSummary}</p>
+              <div id='contact-name'>
+                <p>{contact.contactName}<i className="bi bi-chevron-right"></i></p>
+              </div>
+              <div id='contact-content'>
+                <p>{contact.shortSummary}</p>
+              </div>
             </Link>
           </div>
         </section>

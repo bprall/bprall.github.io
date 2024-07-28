@@ -40,7 +40,7 @@ body {
     color: #747474;
 }
 
-.project p {
+.project-text {
     margin: var(--padding) var(--margin-horizontal);
 }
 

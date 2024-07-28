@@ -5,6 +5,8 @@
   --background-color: #e2e2e2;
   --highlight-color: #f1f1f1;
   --accent-color: #ebb95e;
+  --font-size: 1.2rem;
+  --header-size: 2.4rem;
 }
 
 html,body {

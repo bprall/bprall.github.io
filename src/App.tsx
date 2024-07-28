@@ -9,13 +9,7 @@ import RenderAbout  from "./pages/about";
 import RenderContact from "./pages/contact";
 import RenderProjects from "./pages/projects";
 import RenderFrontPage from "./pages/frontPage";
-import RenderSourceCode from "./pages/sourceCode";
-import RenderSignupPending from "./pages/signupPending";
 import RenderProjectPage from "./pages/projectPage";
-import RenderLogin from "./components/auth/login";
-import RenderSignUp from "./components/auth/signup";
-import { AuthProvider } from "./components/auth/auth";
-import { RequireAuth } from "./components/auth/requireAuth";
 
 firebase.initializeApp(firebaseConfig);
 
@@ -29,33 +23,15 @@ const Layout: React.FC<{ children: ReactNode }> = ({ children }) => {
   );
 };
 
-function ProtectedRoute({ element }: { element: ReactNode }) {
-  return (
-    <RequireAuth>
-      <div className="main-container">
-        <RenderSearch />
-        <RenderNavbar />
-        {element}
-      </div>
-    </RequireAuth>
-  );
-}
-
 function App() {
   return (
-    <AuthProvider>
-      <Routes>
-        <Route path="" element={<Layout><RenderFrontPage /></Layout>} />
-        <Route path="/about" element={<Layout><RenderAbout /></Layout>} />
-        <Route path="/login" element={<RenderLogin />} />
-        <Route path="/signup" element={<RenderSignUp />} />
-        <Route path="/signup-pending" element={<RenderSignupPending />} />
-        <Route path="/contact" element={<Layout><RenderContact /></Layout>} />
-        <Route path="/projects" element={<Layout><RenderProjects /></Layout>} />
-        <Route path="/projects/:id" element={<Layout><RenderProjectPage /></Layout>} />
-        <Route path="/source-code" element={<ProtectedRoute element={<RenderSourceCode />} />} />
-      </Routes>
-    </AuthProvider>
+    <Routes>
+      <Route path="" element={<Layout><RenderFrontPage /></Layout>} />
+      <Route path="/about" element={<Layout><RenderAbout /></Layout>} />
+      <Route path="/contact" element={<Layout><RenderContact /></Layout>} />
+      <Route path="/projects" element={<Layout><RenderProjects /></Layout>} />
+      <Route path="/projects/:id" element={<Layout><RenderProjectPage /></Layout>} />
+    </Routes>
   );
 }
 

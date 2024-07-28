@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ChangeIcon } from '../utils/mouseEvents';
-import { useAuth } from './auth/auth';
-import { getAuth, signOut } from 'firebase/auth';
 import { Dropdown, Offcanvas, Button } from 'react-bootstrap';
 import { Project } from '../utils/interfaces';
 
@@ -14,7 +12,6 @@ function RenderNavbar() {
   const [cv, setCvLink] = useState('');
   const [projects, setProjects] = useState<Project[]>([]);
   const [showOffcanvas, setShowOffcanvas] = useState(false);
-  const auth = useAuth();
 
   useEffect(() => {
     fetch('../../data.json')
@@ -27,10 +24,6 @@ function RenderNavbar() {
         console.error('Error fetching data:', error);
       });
   }, []);
-
-  const handleLogOut = () => {
-    signOut(getAuth());
-  };
 
   const handleCVClick = (event) => {
     event.preventDefault();
@@ -106,17 +99,6 @@ function RenderNavbar() {
               </li>
             </ul>
           </div>
-          <div>
-            {auth?.user ? (
-              <Link className="nav-login" to="" onClick={handleLogOut}>
-                <i className="bi bi-box-arrow-in-left login-arrow"></i>Log out
-              </Link>
-            ) : (
-              <Link className="nav-login" to="/login">
-                <i className="bi bi-box-arrow-in-left login-arrow"></i>Log in
-              </Link>
-            )}
-          </div>
         </div>
       </nav>
 
@@ -182,17 +164,6 @@ function RenderNavbar() {
                 {CapitalizeFirst('contact')}
               </Link>
             </li>
-            <div className='offcanvas-login'>
-            {auth?.user ? (
-              <Link className="nav-login" to="" onClick={handleLogOut}>
-                <i className="bi bi-box-arrow-in-left login-arrow"></i>Log out
-              </Link>
-            ) : (
-              <Link className="nav-login" to="/login" onClick={handleOffCanvasLinkClick}>
-                <i className="bi bi-box-arrow-in-left login-arrow"></i>Log in
-              </Link>
-            )}
-          </div>
           </ul>
         </Offcanvas.Body>
       </Offcanvas>
