@@ -291,6 +291,21 @@ const RenderSearch: React.FC = () => {
                 </Link>
               );
             }
+            // Check if the result is of type FrontPageHeader
+            if ( 'text' in result) {
+              return (
+                <Link id="result-row" to="/" key={index}>
+                  <div id="indiv-result">
+                    <p id="result-name">
+                      {result.title}
+                    </p>
+                    <p id="result-page">
+                      (Home)
+                    </p>
+                  </div>
+                </Link>
+              );
+            }
             // Check if the result is of type FrontPageParagraph
             if ( 'content' in result) {
               return (

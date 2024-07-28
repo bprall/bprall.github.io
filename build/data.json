@@ -15,26 +15,12 @@
     },
     "paragraphs": [
       {
-        "title": "Why I Made This Site",
-        "content": "This personal website serves as a showcase for my skills and projects as a recent computer science graduate. I created this site to demonstrate my technical abilities, share my work, and provide a platform where visitors can learn more about my achievements and ongoing projects. It's a reflection of my journey in the tech field and a place for me to present my work in a professional format."
-      },
-      {
         "title": "About This Site",
         "content": "This site was developed using React and Vite for a modern, fast development experience. React Router DOM enables seamless navigation between pages, while dynamic page generation is powered by a JSON file that allows for easy content updates. The website is also designed using grid, allowing for easy reformatting for anyone who may be viewing on a mobile device. Currently hosted on GitHub, the site features a custom logo and integrates Firebase for user signup and login, providing access to view the source code."
       },
       {
-        "title": "About Me",
-        "content": "Discover my journey and stay updated with my latest endeavors and achievements. On the About Page, you can read about my background as a recent computer science graduate, my story, and what's currently going on in my life. It's a space where I share my personal and professional milestones, providing insight into who I am and what drives me.",
-        "link": "/about"
-      },
-      {
-        "title": "Projects",
-        "content": "Explore the projects I've worked on through the Projects Page. From developing a mobile game emulator to a deep learning program for synapse detection, an automatic speech-to-text system, and a collaborative budgeting application, my portfolio showcases a variety of technical achievements. Each project reflects my passion for innovation and problem-solving. Currently, my focus is on this personal website, designed to highlight my skills and provide a platform for my work.",
-        "link": "/projects"
-      },
-      {
         "title": "Future Plans for the Site",
-        "content": "In the future, I plan to host my personal website locally using a Linux server. This approach will give me more control over the environment and the opportunity to fine-tune performance and security settings. I am considering several hosting frameworks, including Nginx for its high performance and stability, Apache for its versatility and robust feature set, and Docker for containerization, which would allow for easy deployment and scalability. These tools will enable me to maintain a highly efficient and reliable website. By hosting locally, I aim to provide a seamless and professional experience for visitors, eliminating the lack of browser routing on github pages, and further demonstrating my technical expertise and commitment to quality."
+        "content": "In the future, I plan to host my personal website locally using a Linux server via Ubuntu Server. This approach will give me more control over the environment and the opportunity to fine-tune performance and security settings. I am considering several hosting frameworks, including Nginx for its high performance and stability, Apache for its versatility and robust feature set, and Docker for containerization, which would allow for easy deployment. These tools will enable me to maintain a highly efficient and reliable website. By hosting locally, I aim to provide a seamless and professional experience for visitors, eliminating the lack of browser routing on github pages, and further demonstrating my technical expertise and commitment to quality."
       }
     ]
   },
