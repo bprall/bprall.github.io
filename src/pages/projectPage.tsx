@@ -39,7 +39,7 @@ const RenderProjectPage: React.FC = () => {
     if (loading) {
         return (
             <main>
-                <p>Loading...</p>
+                <div/>
             </main>
         );
     }
@@ -63,12 +63,21 @@ const RenderProjectPage: React.FC = () => {
     return (
         <main>
             <section className="project" id={project.type}>
-                <h3>
-                    {project.title}
-                    <a href={project.titleLink} target='_blank'>
-                        <u>{project.titleLinkLabel}</u>
-                    </a>
-                </h3>
+                <div className="project-header">
+                    <p>{project.title}</p>
+                    <div className="project-page-buttons">
+                        {project.titleLink && (
+                            <a href={project.titleLink} className="project-page-button" target="_blank" rel="noopener noreferrer">
+                                GitHub
+                            </a>
+                        )}
+                        {project.siteLink && (
+                            <a href={project.siteLink} className="project-page-button" target="_blank" rel="noopener noreferrer">
+                                Live Site
+                            </a>
+                        )}
+                    </div>
+                </div>
                 {project.type === "pdf" ? (
                     <iframe
                         src={project.materials ? project.materials[0].path : ""}

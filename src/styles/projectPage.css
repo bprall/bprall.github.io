@@ -16,28 +16,56 @@ body {
     background-color: var(--highlight-color);
     border-radius: var(--border-radius);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    margin: 0 10rem 5rem 10rem;
+    margin: 5rem auto 6rem auto;
+    width: 90%;
+    max-width: 60rem;
 }
 
-.project h3 {
+.project-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: var(--padding);
+    margin: auto;
+    padding: .5rem;
     background-color: var(--primary-color);
     color: var(--secondary-color);
     border-radius: var(--border-radius);
-    margin-bottom: 1rem;
 }
 
-.project h3 a {
-    color: var(--secondary-color);
-    text-decoration: underline;
-    transition: color 0.3s ease;
+.project-header p{
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin: 0.5rem;
 }
 
-.project h3 a:hover {
-    color: #747474;
+.project-page-buttons {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-right: 1rem;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.project-page-button {
+    margin: 0 0 0 2rem;
+    padding: 0.2rem .4rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border: 2px solid var(--highlight-color);
+    color: var(--highlight-color);
+    border-radius: 1rem;
+    text-decoration: none;
+    transition: color .6s ease, border .6s ease;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: clip;
+    flex-shrink: 0;
+}
+
+.project-page-button:hover {
+    border: 2px solid var(--accent-color);
+    color: var(--accent-color);
 }
 
 .project-text {
