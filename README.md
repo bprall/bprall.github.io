@@ -50,4 +50,4 @@ npm run dev
 ```
 
 ## Configuration 
-- **Firebase Setup:** This project requires Firebase for authentication. Set up your own Firebase configuration by following the [Firebase setup instructions](https://firebase.google.com/docs/web/setup), and update the configuration in the project code.
+- **Firebase Setup:** This project requires Firebase for authentication. Set up your own Firebase configuration by following the [Firebase setup instructions](https://firebase.google.com/docs/web/setup), and add the configuration in the project code.
