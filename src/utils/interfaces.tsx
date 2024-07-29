@@ -8,10 +8,8 @@ export interface Project {
     title: string;
     type: string;
     siteLink?: string;
-    titleLink: string;
-    titleLinkLabel: string;
+    sourceLink?: string;
     description: string;
-    descriptionImage?: string;
     frontPageDesc?: string;
     contentImages?: string[];
     contents?: string;

@@ -103,8 +103,8 @@ const RenderFrontPage: React.FC = () => {
                   </div>
                   <div className="home-card-buttons">
                     <Link to={`/projects/${project.id}`} className="home-card-button">Page</Link>
-                    {project.titleLink && (
-                      <a href={project.titleLink} className="home-card-button" target="_blank" rel="noopener noreferrer">
+                    {project.sourceLink && (
+                      <a href={project.sourceLink} className="home-card-button" target="_blank" rel="noopener noreferrer">
                         Source
                       </a>
                     )}

@@ -66,8 +66,8 @@ const RenderProjectPage: React.FC = () => {
                 <div className="project-header">
                     <p>{project.title}</p>
                     <div className="project-page-buttons">
-                        {project.titleLink && (
-                            <a href={project.titleLink} className="project-page-button" target="_blank" rel="noopener noreferrer">
+                        {project.sourceLink && (
+                            <a href={project.sourceLink} className="project-page-button" target="_blank" rel="noopener noreferrer">
                                 GitHub
                             </a>
                         )}

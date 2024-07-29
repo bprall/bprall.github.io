@@ -117,10 +117,8 @@
       "id": "personal-website",
       "title": "Personal Website Development",
       "type": "text",
-      "titleLink": "https://github.com/bprall/bprall.github.io",
-      "titleLinkLabel": "GitHub Repo",
+      "sourceLink": "https://github.com/bprall/bprall.github.io",
       "description": "personal website portfolio web development TypeScript TSX React Node.js React Router DOM Vite Firebase dynamic content real-time updates responsive design CSS Grid off-canvas navbar global search functionality versatile search JSON file content management security user authentication login scalable solution user experience web application professional experience technical expertise My personal website based in React. html css typescript javascript website portfolio personal react reactjs react.js vite json node nodejs node.js dynamic content loading React Router DOM dynamic page generation grid flex offcanvas custom logo",
-      "descriptionImage": "",
       "frontPageDesc": "My personal website developed with React and Vite.",
       "contentsImages": [
 
@@ -131,10 +129,8 @@
       "id": "shell-interpreter",
       "title": "Simple Shell Command Interpreter",
       "type": "text",
-      "titleLink": "https://github.com/bprall/Rudimentary-Shell/",
-      "titleLinkLabel": "",
+      "sourceLink": "https://github.com/bprall/Rudimentary-Shell/",
       "description": "shell command interpreter C programming fork execvp POSIX-compatible input redirection output redirection append redirection error handling interactive prompt command execution file operations system calls command parsing input handling output management user interaction",
-      "descriptionImage": "",
       "frontPageDesc": "A ruidmentary command interpreter written in C.",
       "contentsImages": [],
       "contents": "&emsp;The Simple Shell Command Interpreter is a C-based project designed to mimic basic shell functionalities. It can execute commands, handle input and output redirection, and manage errors effectively. The project showcases fundamental shell features and system programming skills.<br>&emsp;To start, the interpreter prompts users with a `cssh$ ` command line, allowing them to enter various commands. It supports input redirection with `<`, output redirection with `>`, and output append redirection with `>>`. The shell continuously processes commands until the user types `exit`.<br>&emsp;The core of the project involves using system calls such as `fork` for process creation and `execvp` for executing commands. Redirections are handled by manipulating file descriptors with `dup2`, ensuring that input and output are correctly redirected according to user commands.<br>&emsp;The shell includes basic error handling to manage common issues, such as incorrect usage of redirection operators or file access problems. This functionality is crucial for ensuring the interpreter behaves reliably under various conditions.<br>&emsp;Developing this shell provided valuable experience in system programming, command execution, and error handling. It highlights the power of C and POSIX systems for creating interactive applications and understanding low-level operations.<br>&emsp;Overall, this project exemplifies how a simple yet effective shell can be built using fundamental programming concepts and system calls, offering insights into the workings of command-line interfaces and process management."
@@ -144,10 +140,8 @@
       "title": "Full Stack Budgeting App",
       "type": "text",
       "siteLink": "https://budgetapp-8ac58.web.app/",
-      "titleLink": "https://github.com/leddyd/BudgetApp",
-      "titleLinkLabel": "GitHub Repo",
+      "sourceLink": "https://github.com/leddyd/BudgetApp",
       "description": "budgeting app financial tool React TypeScript TSX D3 interactive charts Firebase user authentication Firestore NoSQL database real-time synchronization data storage user interface budget tracking expense categorization financial goals user empowerment personal finance management web development security modular codebase dynamic charts collaborative development user experience financial insights Web application for budgeting built with React & D3. d3 d3.js d3js firebase firestore login signup google signup html css typescript javascript website portfolio personal react reactjs react.js vite json node nodejs node.js dynamic content loading React Router DOM dynamic page generation flex custom logo",
-      "descriptionImage": "https://cdn.glitch.global/3874a658-483f-41ac-b439-3b48eab1370f/distantdollar-Capture1.JPG?v=1721778684432",
       "frontPageDesc": "Web application for budgeting built with React & D3.",
       "contentsImages": [
 
@@ -158,10 +152,8 @@
       "id": "asr-project",
       "title": "Automatic Speech Recognition",
       "type": "pdf",
-      "titleLink": "https://github.com/bprall/Automatic-Speech-Recognition",
-      "titleLinkLabel": "GitHub Repo",
+      "sourceLink": "https://github.com/bprall/Automatic-Speech-Recognition",
       "description": "ASR automatic speech recognition CNN convolutional neural network LSTM long short-term memory CTC connectionist temporal classification audio processing speech-to-text model deep learning feature extraction sequence-to-sequence learning speech features time-series data acoustic modeling text transcription neural network architecture speech recognition training inference voice recognition machine learning data augmentation feature maps recurrent layers attention mechanism CTC loss function speech dataset training data phoneme recognition language modeling acoustic features paper machine learning Automatic Speech Recognition Program via deep machine learning. python scripts cer wer pytorch deep learning machine learning asr",
-      "descriptionImage": "https://cdn.glitch.global/3874a658-483f-41ac-b439-3b48eab1370f/Capture.JPG?v=1721782400085",
       "frontPageDesc": "Automatic Speech Recognition Program via deep machine learning.",
       "contentsImages": [
 
@@ -178,10 +170,8 @@
       "id": "dns",
       "title": "DNS Server",
       "type": "text",
-      "titleLink": "https://github.com/bprall/Java-DNS",
-      "titleLinkLabel": "GitHub Repo",
+      "sourceLink": "https://github.com/bprall/Java-DNS",
       "description": "DNS server Java caching recursive queries zone files TTL query handling response forwarding upstream servers request forwarding DNS records customizable zone file caching mechanism server configuration server setup query resolution network communication DNS message parsing DNS record definition DNS caching Java Instant class request handling DNS zone management build script Makefile example zone file DNS server class HTTP server response output dig command testing network protocols DNS query response handling server-side scripting caching records TTL management DNS query forwarding DNS server files java dig routing ip ipv4 Basic Java-based DNS server handling recursive queries and caching.",
-      "descriptionImage": "https://cdn.glitch.global/3874a658-483f-41ac-b439-3b48eab1370f/dns-img.png?v=1722040052514",
       "frontPageDesc": "Java-based DNS server handling recursive queries and caching.",
       "contentsImages": [
   
@@ -192,10 +182,8 @@
       "id": "basic-http",
       "title": "Basic HTTP Server",
       "type": "text",
-      "titleLink": "https://github.com/bprall/Basic-HTTP",
-      "titleLinkLabel": "GitHub Repo",
+      "sourceLink": "https://github.com/bprall/Basic-HTTP",
       "description": "Basic Java-based HTTP server handling GET requests. HTTP server GET requests web server routing request handling response handling server-side programming REST API URL endpoints request parsing response formatting status codes request headers response headers server configuration middleware logging error handling server-side scripting protocols TCP/IP sockets HTTP methods request handling routing framework lightweight server request processing response generation server logic concurrency threading asynchronous processing network communication error handling request validation server response headers HTTP status codes network protocols server architecture",
-      "descriptionImage": "",
       "frontPageDesc": "Basic Java-based HTTP server handling GET requests.",
       "contentsImages": [
   
@@ -206,10 +194,8 @@
       "id": "segmentation-project",
       "title": "Synaptic Segmentation via Deep Learning",
       "type": "pdf",
-      "titleLink": "https://github.com/bprall/Neuron-Cleft-Segmentation",
-      "titleLinkLabel": "GitHub Repo",
+      "sourceLink": "https://github.com/bprall/Neuron-Cleft-Segmentation",
       "description": "scikit-learn cv2 deep learning synaptic segmentation convolutional neural network CNN image segmentation neural network training model accuracy loss function dataset preprocessing augmentation feature extraction segmentation masks class activation maps backpropagation optimization hyperparameters overfitting regularization dropout transfer learning fine-tuning epochs batch size learning rate activation functions pooling layers convolutional layers filters kernels architecture design feature maps classification object detection data augmentation evaluation metrics precision recall F1 score cross-validation performance metrics GPU acceleration tensor operations PyTorch implementation software libraries paper pytorch python scripts machine learning Synaptic Cleft Segmentation via CNN.",
-      "descriptionImage": "https://cdn.glitch.global/3874a658-483f-41ac-b439-3b48eab1370f/Capture.JPG?v=1721782203647",
       "frontPageDesc": "Synaptic Cleft Segmentation via CNN.",
       "contentsImages": [
 
@@ -226,10 +212,7 @@
       "id": "emulator",
       "title": "Mobile Game Emulator",
       "type": "text",
-      "titleLink": "",
-      "titleLinkLabel": "",
       "description": "emulator mobile game development architecture reverse engineering debugging performance optimization cross-platform compatibility source code custom firmware virtual machine ROMs APIs input handling graphics rendering sound emulation scripting tools hardware abstraction user interface testing debugging tools compatibility layers game engine customization game preservation software development open source contributions gaming community emulator features configuration settings performance metrics",
-      "descriptionImage": "",
       "frontPageDesc": "Mobile game emulator made with a Raspberry Pi.",
       "contentsImages": [
 

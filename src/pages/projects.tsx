@@ -50,8 +50,8 @@ const RenderProjects: React.FC = () => {
                 <p className="home-card-description">{project.frontPageDesc || project.description}</p>
                 <div className="home-card-buttons">
                   <Link to={`/projects/${project.id}`} className="home-card-button">Page</Link>
-                  {project.titleLink && (
-                    <a href={project.titleLink} className="home-card-button" target="_blank" rel="noopener noreferrer">
+                  {project.sourceLink && (
+                    <a href={project.sourceLink} className="home-card-button" target="_blank" rel="noopener noreferrer">
                     Source
                     </a>
                   )}
