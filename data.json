@@ -28,7 +28,8 @@
     "photo": "https://cdn.glitch.global/3874a658-483f-41ac-b439-3b48eab1370f/1.png?v=1721935881214",
     "name": "Blake Prall",
     "education": "Boston College - Chestnut Hill, MA",
-    "majors": ["Neuroscience B.S.", "Computer Science B.A."],
+    "degree": "B.S. Double Major:", 
+    "majors": ["Computer Science", "Neuroscience"],
     "selfSummary": "I am a recent graduate from Boston College with a double major in Computer Science and Neuroscience. Originating from Cottage Grove, Minnesota, my academic journey has been characterized by a passion for exploring the limitless potential of technology. My dual major in neuroscience and computer science reflects my interdisciplinary approach, where I've leveraged computational methods to solve complex problems and drive innovation.<br><br>Throughout my studies, I've developed robust skills in research, problem-solving, and software development, preparing me to thrive in a dynamic software engineering environment. I am eager to contribute my technical expertise and enthusiasm for innovation to your team, delivering impactful solutions and advancing technology to new heights.",
     "moreDetails": [
       {

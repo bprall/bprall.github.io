@@ -111,7 +111,7 @@
     margin: 0;
     margin-right: 1.5rem;
     padding: 0.4rem .8rem;
-    font-size: var(--font-size);
+    font-size: var(--text-size);
     font-weight: bold;
     color: var(--accent-color);
     background-color: var(--background-color);
@@ -224,7 +224,7 @@
 }
   
 .home-news-title {
-    font-size: var(--font-size);
+    font-size: var(--text-size);
     color: var(--primary-color);
     font-weight: bold;
     flex: 1;
@@ -241,7 +241,7 @@
 }
 
 .home-paragraph-content {
-    font-size: var(--font-size);
+    font-size: var(--text-size);
     margin-left: 2rem;
 }
   
@@ -296,7 +296,7 @@
 }
 
 #contact-content {
-    font-size: var(--font-size);
+    font-size: var(--text-size);
 }
 
 input[type=submit] {

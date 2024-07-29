@@ -22,6 +22,7 @@ export interface About {
   photo: string;
   name: string;
   education: string;
+  degree: string;
   majors: string[];
   selfSummary: string;
   moreDetails: {

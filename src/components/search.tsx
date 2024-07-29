@@ -122,6 +122,7 @@ const RenderSearch: React.FC = () => {
       ].filter(item =>
         item.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
         item.education.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        item.degree.toLowerCase().includes(searchTerm.toLowerCase()) ||
         item.majors.some(major => major.toLowerCase().includes(searchTerm.toLowerCase())) ||
         item.selfSummary.toLowerCase().includes(searchTerm.toLowerCase()) ||
         item.moreDetails.some(detail => detail.title.toLowerCase().includes(searchTerm.toLowerCase()) ||

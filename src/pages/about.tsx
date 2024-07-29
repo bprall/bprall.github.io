@@ -39,17 +39,20 @@ const RenderAbout: React.FC = () => {
       <div className="left-side">
         {about && (
           <>
-            <center><img src={about.photo} alt="Your Photo" className="about-photo" /></center>
+            <center>
+              <img src={about.photo} alt="Your Photo" className="about-photo" />
+            </center>
             <h1 className="about-name">{about.name}</h1>
             <section id="education" className="education">
-              <h3 id='college'>{about.education}</h3>
-              <p id='majors'>
+              <h3 id="college">{about.education}</h3>
+              <p id="degree">{about.degree} <br/></p>
+              <p id="majors">
                 {about.majors[0]} <br/>
                 {about.majors[1]}
               </p>
             </section>
             <section id="news" className="news">
-              <h2 id='news-title'>News</h2>
+              <p id="news-title">News</p>
               <input
                 type="text"
                 name="news"
@@ -73,11 +76,15 @@ const RenderAbout: React.FC = () => {
       <section className="right-side">
         {about && (
           <>
-            <div className="short-summary" dangerouslySetInnerHTML={{ __html: about.selfSummary || '' }}/>
+            <div className="short-summary" dangerouslySetInnerHTML={{ __html: about.selfSummary || '' }} />
             {about.moreDetails.map((detail, index) => (
               <section key={index} className="more-detail">
-                <h3 id="detail-title">{detail.title}</h3>
-                <p id="detail-content">{detail.content}</p>
+                <div className='detail-title'>
+                  {detail.title}
+                </div>
+                <div className='detail-content'>
+                  {detail.content}
+                </div>
               </section>
             ))}
           </>

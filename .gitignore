@@ -16,7 +16,6 @@ dist-ssr
 #Ignore Firebase
 .firbase
 firebaseConfig.ts
-firebase.json
 .firebaserc
 
 # Editor directories and files
