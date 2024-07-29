@@ -31,11 +31,11 @@ This project has a tech stack that includes TypeScript (TSX), React, Node.js, Re
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/your-username/your-repo-name.git
+    git clone https://github.com/username/repo-name.git
     ```
 2. Navigate to the project directory:
     ```bash
-    cd your-repo-name
+    cd repo-name
     ```
 3. Install the necessary dependencies:
     ```bash
