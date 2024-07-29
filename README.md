@@ -4,7 +4,7 @@ Welcome to the repository for my [personal website](https://bprall.github.io). T
 
 ## Project Overview
 
-This project serves as a showcase of my professional journey and skills. It demonstrates my expertise in web development with a tech stack that includes TypeScript (TSX), React, Node.js, React Router DOM, Vite, and Firebase. Here’s what the website offers:
+This project has a tech stack that includes TypeScript (TSX), React, Node.js, React Router DOM, Vite, and Firebase. Here’s what the website offers:
 
 - **Dynamic Content Updates:** Seamless content updates without full page reloads, powered by a JSON file.
 - **Responsive Design:** Adaptive layout using CSS Grid, with an off-canvas navbar for mobile users.
