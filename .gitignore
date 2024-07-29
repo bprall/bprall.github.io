@@ -14,7 +14,7 @@ dist-ssr
 *.local
 
 #Ignore Firebase
-.firbase
+.firebase
 firebaseConfig.ts
 .firebaserc
 
