@@ -79,36 +79,40 @@ const RenderSearch: React.FC = () => {
   }, [searchTerm, projects, searchCategory]);
 
   useEffect(() => {
-    if (searchTerm && (searchCategory === 'Home' || searchCategory === 'Global')) {
-      const paragraphResults = homeParagraph ? homeParagraph.filter(item =>
-        item.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        item.content.toLowerCase().includes(searchTerm.toLowerCase())
-      ) : [];
-      
-      const contactResults = homeContact ? [
-        homeContact
-      ].filter(item =>
-        item.contactName.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        item.shortSummary.toLowerCase().includes(searchTerm.toLowerCase())
-      ) : null;
-      
-      const headerResults = homeHeader && (
-        homeHeader.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        homeHeader.text.some(text => text.toLowerCase().includes(searchTerm.toLowerCase()))
-      ) ? [homeHeader] : [];
-
-      const newsResults = news.slice(0,10).filter(item =>
-        item.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        item.date.toLowerCase().includes(searchTerm.toLowerCase())
-      );
-
-      const projectResults = projects.filter(item =>
-        item.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        item.frontPageDesc.toLowerCase().includes(searchTerm.toLowerCase())
-      );
-
-      const combinedResults = [...paragraphResults, ...contactResults, ...headerResults, ...newsResults, ...projectResults];
-    
+    if (searchTerm) {
+      let combinedResults = [];
+  
+      if (searchCategory === 'Home' || searchCategory === 'Global') {
+        const paragraphResults = homeParagraph ? homeParagraph.filter(item =>
+          item.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+          item.content.toLowerCase().includes(searchTerm.toLowerCase())
+        ) : [];
+  
+        const contactResults = homeContact ? [
+          homeContact
+        ].filter(item =>
+          item.contactName.toLowerCase().includes(searchTerm.toLowerCase()) ||
+          item.shortSummary.toLowerCase().includes(searchTerm.toLowerCase())
+        ) : [];
+  
+        const headerResults = homeHeader && (
+          homeHeader.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+          homeHeader.text.some(text => text.toLowerCase().includes(searchTerm.toLowerCase()))
+        ) ? [homeHeader] : [];
+  
+        const newsResults = (searchCategory === 'Home' ? news.slice(0, 10) : []).filter(item =>
+          item.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+          item.date.toLowerCase().includes(searchTerm.toLowerCase())
+        );
+  
+        const projectResults = (searchCategory === 'Home' ? projects : []).filter(item =>
+          item.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+          item.frontPageDesc.toLowerCase().includes(searchTerm.toLowerCase())
+        );
+  
+        combinedResults = [...paragraphResults, ...contactResults, ...headerResults, ...newsResults, ...projectResults];
+      }
+  
       setFilteredHomeResults(combinedResults);
     } else {
       setFilteredHomeResults([]);
