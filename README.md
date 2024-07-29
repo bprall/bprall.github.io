@@ -1,4 +1,4 @@
-# Personal Website
+# Personal-Website
 
 Welcome to the repository for my [personal website](https://bprall.github.io). This website, built using React and Vite, dynamically generates content through a JSON file (`data.json`), enabling real-time updates and a responsive design. Key features include a global search bar, a responsive layout with CSS Grid, and an off-canvas navbar for mobile navigation.
 
