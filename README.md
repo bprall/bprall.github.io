@@ -1,36 +1,53 @@
-# Personal-Website
-The code for my [personal website](https://bprall.github.io) built usaing React + Vite. The site can be easily updated through the use of a JSON file (`data.json`) that dynamically generates content on the pages. The site is designed to reformat based on device size, achieved through CSS Grid and a secondary off-canvas navbar. It also includes a global search bar that can search site-wide or by specific pages.
+# Personal Website
 
-All code was written by Blake Prall
+Welcome to the repository for my [personal website](https://bprall.github.io). This website, built using React and Vite, dynamically generates content through a JSON file (`data.json`), enabling real-time updates and a responsive design. Key features include a global search bar, a responsive layout with CSS Grid, and an off-canvas navbar for mobile navigation.
 
-# Package Dependencies
-```
-Node.js 20.10.0 LTS
-React + Vite
-Firebase
-```
+## Project Overview
 
-# Prerequisites
-### Install NodeJs:
-```
-The latest installation can be found at https://nodejs.org/en
-Make sure to also install node package manager
-```
+This project serves as a showcase of my professional journey and skills. It demonstrates my expertise in web development with a tech stack that includes TypeScript (TSX), React, Node.js, React Router DOM, Vite, and Firebase. Here’s what the website offers:
 
-# Commands
-### Install Dependencies:
+- **Dynamic Content Updates:** Seamless content updates without full page reloads, powered by a JSON file.
+- **Responsive Design:** Adaptive layout using CSS Grid, with an off-canvas navbar for mobile users.
+- **Global Search Functionality:** A versatile search bar that supports site-wide and page-specific searches.
+- **Content Management:** Easy updates to news, projects, personal details, and contact information via a JSON file.
+- **Firebase Integration:** Secure authentication for restricted content and source code access.
 
-```
-1. Navigate to the project directory
-2. Enter npm install
-```
+## Tech Stack
 
-### Run the Development Environment:
-```
+- **Node.js 20.10.0 LTS**
+- **React + Vite**
+- **Firebase**
+
+## Prerequisites
+
+### Install Node.js
+
+1. Download and install the latest version from the [Node.js official website](https://nodejs.org/en).
+2. Ensure that Node Package Manager (npm) is also installed.
+
+## Installation and Setup
+
+### Install Dependencies
+
+1. Clone the repository:
+    ```bash
+    git clone https://github.com/your-username/your-repo-name.git
+    ```
+2. Navigate to the project directory:
+    ```bash
+    cd your-repo-name
+    ```
+3. Install the necessary dependencies:
+    ```bash
+    npm install
+    ```
+
+### Run the Development Environment
+
+Start the development server:
+```bash
 npm run dev
 ```
 
-### Build the Project: 
-```
-npm run build
-```
+## Configuration 
+- **Firebase Setup:** This project requires Firebase for authentication. Set up your own Firebase configuration by following the [Firebase setup instructions](https://firebase.google.com/docs/web/setup), and update the configuration in the project code.

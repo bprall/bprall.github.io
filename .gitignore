@@ -18,6 +18,10 @@ dist-ssr
 firebaseConfig.ts
 .firebaserc
 
+#Ignore Some Packages
+package-lock.json
+package.json
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
