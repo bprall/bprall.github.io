@@ -10,8 +10,8 @@
 }
 
 .contact {
-  padding: 20px;
-  max-width: 1200px; 
+  padding: 1rem;
+  max-width: 75rem; 
   margin: 5rem auto 6rem auto; 
   color: black;
 }
@@ -19,33 +19,33 @@
 .grid-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 20px;
+  gap: 2rem;
 }
   
 .feedback-form, .contact-info {
-  padding: 20px;
-  border: 1px solid #ddd;
+  padding: 1rem;
+  border: .05rem solid #ddd;
   background-color: #f9f9f9;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 .3rem .5rem rgba(0, 0, 0, 0.5);
   animation: fadeInFromBottom .8s ease-out;
 }
   
-.feedback-form h2 {
-  margin-top: 0;
-  font-size: 1.5em;
+#feedback-form-header{
+  margin: 0 0 .5rem 0;
+  font-size: 1.6em;
 }
   
-.feedback-form p {
-  font-size: 1.1em;
-  margin-bottom: 20px;
+#feedback-form-info {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
 }
   
 .feedback-form input, .feedback-form textarea {
-  width: calc(100% - 20px);
-  padding: 10px;
-  margin-top: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  width: calc(100% - 1rem);
+  padding: .7rem;
+  margin-top: .6rem;
+  border: .05rem solid #ccc;
+  border-radius: .35rem;
   box-sizing: border-box; 
 }
   
@@ -54,88 +54,102 @@
 }
   
 .feedback-form button {
-  margin-top: 10px;
-  padding: 12px 20px;
+  margin-top: .7rem;
+  padding: .7rem 1.1rem;
   border: none;
-  border-radius: 5px;
+  border-radius: .3rem;
   background-color: var(--primary-color);
   color: white;
   cursor: pointer;
   transition: background-color 0.5s ease;
   transition: color 0.5s ease;
-  font-size: 1em;
+  font-size: 1.2rem;
   width: 75%;
-  margin-left: 12.5%;
-  margin-right: 12.5%;
+  margin: 1.5rem 12.5% 1.5rem 12.5%;
   cursor: pointer;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 .06rem .07rem rgba(0, 0, 0, 0.3);
   transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
 }
   
 .feedback-form button:hover {
-  color: var(--primary-color); 
-  background-color: #eeeeee; 
-  transform: translateY(-2px);
+  background-color: var(--accent-color); 
+  transform: translateY(-.1rem);
 }
 
 .feedback-form button:active {
-  transform: translateY(1px);
+  transform: translateY(.1rem);
 }
-  
-.contact-info h4 {
-  margin-top: 0;
-  font-size: 1.2em;
-  margin-bottom: 10px;
-  border-bottom: 2px solid #ddd;
-  padding-bottom: 5px;
-}
-  
+
 .contact-info div {
-  margin-bottom: 20px;
-  padding-bottom: 15px;
+  padding-bottom: 1rem;
 }
   
-.contact-item {
-  display: flex;
-  align-items: center;
-  margin-bottom: 15px;
+.contact-info-header {
+  position: relative;
+  font-size: 1.5rem;
+}
+
+.contact-info-header::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -4;
+  left: 0;
+  width: 100%;
+  height: .05rem; 
+  background-color: #b1b1b1;
 }
   
 .contact-icon {
   vertical-align: middle;
-  margin-right: 15px;
-  width: 30px; 
-  height: 30px;
+  margin-right: .8rem;
+  width: 1.5rem; 
+  height: 1.5rem;
 }
   
 .contact-text {
-  font-size: 1em;
+  font-size: 1.2rem;
 }
   
-.contact-info a {
-  text-decoration: none;
+.contact-link {
   color: #333;
+  text-decoration: none;
+  position: relative;
+  transition: color 0.3s ease;
 }
 
-.contact-link {
-  transition: color 0.3s ease;
+.contact-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -0.05rem;
+  width: 100%;
+  height: 0.05rem;
+  background-color: #aaaaaa;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.5s ease;
 }
 
 .contact-link:hover {
   color: #aaaaaa;
 }
 
+.contact-link:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
 .social-links {
-  margin-right: 50px; 
+  margin: 0 2rem 0 2rem;
   display: inline-block; 
   text-decoration: none;
 }
 
 .social-links-icons {
-  margin-right: 50px;
+  margin-right: 2.5rem;
 }
 
-@media (max-width: 850px) {
+@media (max-width: 53rem) {
   .grid-container {
     grid-template-columns: 1fr;
     grid-template-rows: auto auto;
@@ -151,7 +165,7 @@
   }
 }
   
-@media (min-width: 850px) {
+@media (min-width: 55rem) {
   .grid-container {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
@@ -162,6 +176,6 @@
   }
 
   .feedback-form {
-      order: initial; 
+    order: initial; 
   }
 }

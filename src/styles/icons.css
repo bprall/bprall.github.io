@@ -39,9 +39,9 @@
 }
 
 .icon {
-    width: 40px; 
-    height: 40px; 
-    margin-top: 10px;
+    width: 2.5rem; 
+    height: 2.5rem; 
+    margin-top: 0.625rem;
     display: inline-block;
     background-size: contain;
     background-repeat: no-repeat;

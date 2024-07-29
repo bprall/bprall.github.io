@@ -9,7 +9,7 @@
   --header-size: 2.4rem;
 }
 
-html,body {
+html, body {
   background-color: var(--background-color);
   font-family: 'Poppins', sans-serif;
   color: rgb(0, 0, 0);
@@ -30,13 +30,13 @@ html,body {
 }
 
 i {
-  margin-right: 8px;
+  margin-right: 0.5rem;
   background-size: 1rem 1rem;
 }
 
 .btn-close {
-  transform: translateY(-10%);
-  font-size: .75em;
+  transform: translateY(-0.625rem);
+  font-size: 0.75em;
 }
 
 .main-container {
@@ -51,7 +51,7 @@ i {
 .app-page-container {
   width: 100%;
   min-height: 100vh;
-  padding-left: 10px;
+  padding-left: 0.625rem;
   overflow-y: auto;
 }
 
@@ -67,9 +67,9 @@ button.text-link {
 @keyframes fade-in {
   from {
       opacity: 0;
-      transform: translateY(20px);
+      transform: translateY(1.25rem);
   } to {
       opacity: 1;
-      transform: translateY(0px);
+      transform: translateY(0);
   }
 }

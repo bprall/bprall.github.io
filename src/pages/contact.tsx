@@ -35,8 +35,12 @@ const RenderContact: React.FC = () => {
     <section className="contact">
       <div className="grid-container">
         <div className="feedback-form">
-          <h2>Feedback Form</h2>
-          <p>Let me know what you think of the site or give suggestions by filling out the form below:</p>
+          <div id="feedback-form-header">
+            Feedback Form
+          </div>
+          <div id="feedback-form-info">
+            Let me know what you think of the site or give suggestions by filling out the form below:
+          </div>
           <form action="mailto:brprall3@gmail.com.com" method="post" encType="text/plain">
             <input type="text" id="name" name="name" placeholder="Your Full Name" required />
             <input type="email" id="email" name="email" placeholder="Your Email" required />
@@ -46,19 +50,25 @@ const RenderContact: React.FC = () => {
         </div>
 
         <div className="contact-info">
-          <div id="location"> 
-            <h4>Location</h4>       
+          <div id="location">
+            <div className="contact-info-header">
+              <p className='contact-info-header-text'>Location</p>  
+            </div>   
             <p className="contact-text">{contact.address[0]}</p>
           </div>
           <div id="contact-details">
-            <h4>Contact Details</h4>
+            <div className="contact-info-header">
+              <p className='contact-info-header-text'>Contact Details</p>
+            </div>
             <p className="contact-text">Email: &nbsp;&nbsp;
             <a className="contact-link" href={`mailto:${contact.email[0]}`}>{contact.email[0]}</a></p><br />
             <p className="contact-text">Phone: &nbsp;&nbsp;
             <a className="contact-link" href={`tel:${contact.phone[0]}`}>{contact.phone[0]}</a></p>
           </div>
           <div id="socials">
-            <h4>Socials</h4>
+            <div className="contact-info-header">
+              <p className='contact-info-header-text'>Socials</p>
+            </div>
             <Link
               className='social-links social-links-icons'
               to={contact.github[0]}
@@ -72,7 +82,7 @@ const RenderContact: React.FC = () => {
               className='social-links social-links-icons'
               to={contact.linkedin[0]}
               target="_blank"
-              onMouseEnter={() => ChangeIcon('.icon', 'icon-linkedin-logo', 'icon-linkedinreverse')}
+              onMouseEnter={() => ChangeIcon('.icon', 'icon-linkedin-logo', 'icon-linkedin-reverse')}
               onMouseLeave={() => ChangeIcon('.icon', 'icon-linkedin-reverse', 'icon-linkedin-logo')}
             >
               <i className="icon icon-linkedin-logo"></i>

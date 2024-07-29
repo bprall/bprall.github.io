@@ -1,19 +1,18 @@
-
 @keyframes fadeInFromLeft {
     0% {
         opacity: 0;
-        transform: translateX(-3%);
+        transform: translateX(-0.48rem);
     }
     100% {
         opacity: 1;
         transform: translateX(0);
     }
 }
-  
+
 @keyframes fadeInFromRight {
     0% {
         opacity: 0;
-        transform: translateX(3%);
+        transform: translateX(0.48rem);
     }
     100% {
         opacity: 1;
@@ -78,11 +77,10 @@
     transform-origin: bottom left;
 }
 
-
 #home-content-container {
     margin-bottom: 5rem;
 }
-  
+
 .home-section-container {
     width: 100%;
     gap: 1rem;
@@ -98,7 +96,7 @@
     margin-bottom: 1rem;
     animation: fadeIn 1s ease-out;
 }
-  
+
 .home-section-header p {
     margin: 0;
     margin-left: 1rem;
@@ -106,22 +104,22 @@
     font-weight: bold;
     color: var(--primary-color);
 }
-  
+
 .home-section-header button {
     margin: 0;
     margin-right: 1.5rem;
-    padding: 0.4rem .8rem;
+    padding: 0.4rem 0.8rem;
     font-size: var(--text-size);
     font-weight: bold;
     color: var(--accent-color);
     background-color: var(--background-color);
-    border: 2px solid var(--accent-color);
+    border: 0.125rem solid var(--accent-color);
     border-radius: 1rem;
-    transition: color .6s ease, border .6s ease;
+    transition: color 0.6s ease, border 0.6s ease;
 }
 
 .home-section-header button:hover {
-    border: 2px solid var(--primary-color);
+    border: 0.125rem solid var(--primary-color);
     color: var(--primary-color);
 }
 
@@ -131,16 +129,16 @@
     gap: 1rem;
     animation: fadeIn 1s ease-out;
 }
-  
+
 .home-card {
     display: flex;
     flex-direction: column;
     justify-content: space-between; 
     background: var(--highlight-color);
-    border: 2px solid var(--primary-color);
+    border: 0.125rem solid var(--primary-color);
     border-radius: 1rem;
     padding: 1rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
     transition: background 1s, box-shadow 0.3s;
 }
 
@@ -150,7 +148,7 @@
 
 .home-card:hover {
     background: var(--background-color);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.5);
 }
 
 .home-card-title {
@@ -172,38 +170,37 @@
 
 .home-card-button {
     margin: 0;
-    padding: 0.2rem .4rem;
+    padding: 0.2rem 0.4rem;
     font-size: 1rem;
     font-weight: bold;
-    border: 2px solid var(--primary-color);
+    border: 0.125rem solid var(--primary-color);
     color: var(--primary-color);
     background-color: var(--highlight-color);
     border-radius: 1rem;
     text-decoration: none;
-    transition: color .6s ease, border .6s ease;
+    transition: color 0.6s ease, border 0.6s ease;
 }
 
 .home-card-button:hover {
-    border: 2px solid var(--accent-color);
+    border: 0.125rem solid var(--accent-color);
     color: var(--accent-color);
     background-color: var(--background-color);
 }
-
 
 #home-news-list {
     list-style-type: none;
     padding: 0;
     margin: 0;
     background-color: var(--background-color);
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
+    border-radius: 0.5rem;
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+}
+
 .home-news-row-link {
     text-decoration: none;
     color: inherit;
 }
-  
+
 .home-news-row {
     display: flex;
     justify-content: space-between;
@@ -212,24 +209,24 @@
     box-sizing: border-box;
     width: 100%;
     transition: background-color 0.5s ease;
-    border-bottom: 1px solid var(--highlight-color);
+    border-bottom: 0.0625rem solid var(--highlight-color);
 }
-  
+
 .home-news-row:last-child {
     border-bottom: none;
 }
-  
+
 .home-news-row:hover {
     background-color: var(--highlight-color);
 }
-  
+
 .home-news-title {
     font-size: var(--text-size);
     color: var(--primary-color);
     font-weight: bold;
     flex: 1;
 }
-  
+
 .home-news-date {
     font-size: 1rem;
     margin-left: 1rem;
@@ -244,17 +241,17 @@
     font-size: var(--text-size);
     margin-left: 2rem;
 }
-  
+
 #about {
     display: flex;
     margin-left: 1rem;
 }
 
 .about-card {
-    margin-top: 15px;
-    margin-bottom: 100px;
+    margin-top: 0.9375rem;
+    margin-bottom: 6.25rem;
     width: 45%;
-    border-top: 2px solid gray;
+    border-top: 0.125rem solid gray;
     cursor: pointer;
     text-decoration: none;
     color: var(--text-color);
@@ -262,33 +259,33 @@
 
 .about-card img {
     width: 40%;
-    aspect-ratio: 1/1;
+    aspect-ratio: 1 / 1;
     border-radius: 50%;
-    margin-bottom: 10px;
+    margin-bottom: 0.625rem;
 }
 
 .bi-chevron-right {
-    margin-left: 5px;
+    margin-left: 0.3125rem;
     transition: margin-left 0.4s ease, transform 0.4s ease;
-    font-size: 18px;
+    font-size: 1.125rem;
 }
 
 .hover-bar {
     background-color: var(--primary-color);
     width: 0;
-    height: 5px;
-    margin-top: -4px;
-    margin-bottom: 30px;
-    transition: width .4s;
+    height: 0.3125rem;
+    margin-top: -0.25rem;
+    margin-bottom: 1.875rem;
+    transition: width 0.4s;
 }
 
-.about-card:hover .hover-bar{
+.about-card:hover .hover-bar {
     width: 100%;
 }
 
 .about-card:hover .bi-chevron-right {
-    margin-left: 10px;
-    transform: translateX(10px);
+    margin-left: 0.625rem;
+    transform: translateX(0.625rem);
 }
 
 #contact-name {
@@ -301,8 +298,8 @@
 
 input[type=submit] {
     width: 100%;
-    padding: 8px 20px;
-    border-radius: 4px;
+    padding: 0.5rem 1.25rem;
+    border-radius: 0.25rem;
     margin: 0;
     display: inline-block;
     box-sizing: border-box;
@@ -310,8 +307,8 @@ input[type=submit] {
     border: none;
     background-color: var(--primary-color);
     font-weight: 500;
-    margin-bottom: 25px;
-    margin-top: 10px;
+    margin-bottom: 1.5625rem;
+    margin-top: 0.625rem;
     transition: background-color 0.2s ease, color 0.2s ease;
 }
 
@@ -320,7 +317,7 @@ input[type=submit]:hover {
     color: black;
 }
 
-@media (max-width: 850px) {
+@media (max-width: 54rem) {
     .about-card {
         width: 70%;
     }
