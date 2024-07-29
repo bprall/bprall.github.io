@@ -1,3 +1,7 @@
+.nonuser-nav-link, .dropdown-item, .offcanvas-body .nav-link {
+    font-size: var(--text-size);
+}
+
 .navbar-container {
     width: 80%;
     max-width: 60rem;
@@ -59,7 +63,7 @@
 .nonuser-nav-item .dropdown-toggle:active,
 .nonuser-nav-item .dropdown-toggle.show {
     background-color: var(--primary-color);
-    color: var(--secondary-color); 
+    color: var(--secondary-color);
 }
 
 .offcanvas-navbutton {

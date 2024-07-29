@@ -210,89 +210,89 @@ const RenderSearch: React.FC = () => {
         </Button>
       </Form>
       {showResults && (filteredProjectResults.length > 0 && (searchCategory === 'Projects')) && (
-        <div id="search-results">
+        <div className="search-results">
           {filteredProjectResults.map(result => (
-            <Link id="result-row" to={`/projects/${result.id}`} key={result.id}>
-              <div id="indiv-result">{result.title}</div>
+            <Link className="result-row" to={`/projects/${result.id}`} key={result.id}>
+              <div className="indiv-result">{result.title}</div>
             </Link>
           ))}
         </div>
       )}
       {showResults && (filteredHomeResults.length > 0 && (searchCategory === 'Home')) && (
-        <div id="search-results">
+        <div className="search-results">
           {filteredHomeResults.map(result => (
             'title' in result ? (
-              <Link id="result-row" to="/" key={result.title}>
-                <div id="indiv-result">{result.title}</div>
+              <Link className="result-row" to="/" key={result.title}>
+                <div className="indiv-result">{result.title}</div>
               </Link>
             ) : (
-              <Link id="result-row" to="/" key="Contact Me">
-                <div id="indiv-result">Contact Me</div>
+              <Link className="result-row" to="/" key="Contact Me">
+                <div className="indiv-result">Contact Me</div>
               </Link>
             )
           ))}
         </div>
       )}
       {showResults && (filteredAboutResults.length > 0 && (searchCategory === 'About')) && (
-        <div id="search-results">
+        <div className="search-results">
           {filteredAboutResults.map(result => (
             'title' in result ? (
-              <Link id="result-row" to="/about" key={result.title}>
-                <div id="indiv-result">{result.title.length > 25 ? `${result.title.substring(0, 25)}...` : result.title}</div>
+              <Link className="result-row" to="/about" key={result.title}>
+                <div className="indiv-result">{result.title.length > 25 ? `${result.title.substring(0, 25)}...` : result.title}</div>
               </Link>
             ) : (
-              <Link id="result-row" to="/about" key={result.name || result.moreDetails.map(detail => detail.title).join('-')}>
-                <div id="indiv-result">{result.name || 'About Section'}</div>
+              <Link className="result-row" to="/about" key={result.name || result.moreDetails.map(detail => detail.title).join('-')}>
+                <div className="indiv-result">{result.name || 'About Section'}</div>
               </Link>
             )
           ))}
         </div>
       )}
       {showResults && (filteredContactResults && (searchCategory === 'Contact')) && (
-        <div id="search-results">
+        <div className="search-results">
           {filteredContactResults.address && (
-            <Link id="result-row" to="/contact">
-              <div id="indiv-result">Address: {contact.address[0]}</div>
+            <Link className="result-row" to="/contact">
+              <div className="indiv-result">Address: {contact.address[0]}</div>
             </Link>
           )}
           {filteredContactResults.phone && (
-            <a id="result-row" href={`tel:${contact.phone[0]}`}>
-              <div id="indiv-result">Phone: {contact.phone[0]}</div>
+            <a className="result-row" href={`tel:${contact.phone[0]}`}>
+              <div className="indiv-result">Phone: {contact.phone[0]}</div>
             </a>
           )}
           {filteredContactResults.email && (
-            <a id="result-row" href={`mailto:${contact.email[0]}`}>
-              <div id="indiv-result">Email: {contact.email[0]}</div>
+            <a className="result-row" href={`mailto:${contact.email[0]}`}>
+              <div className="indiv-result">Email: {contact.email[0]}</div>
             </a>
           )}
           {filteredContactResults.github && filteredContactResults.github.length > 0 && (
-            <a id="result-row" href={contact.github[0]}>
-              <div id="indiv-result">GitHub: {contact.github[1]}</div>
+            <a className="result-row" href={contact.github[0]}>
+              <div className="indiv-result">GitHub: {contact.github[1]}</div>
             </a>
           )}
           {filteredContactResults.url && filteredContactResults.url.length > 0 && (
-            <a id="result-row" href={contact.url[0]}>
-              <div id="indiv-result">URL: {contact.url[1]}</div>
+            <a className="result-row" href={contact.url[0]}>
+              <div className="indiv-result">URL: {contact.url[1]}</div>
             </a>
           )}
           {filteredContactResults.linkedin && filteredContactResults.linkedin.length > 0 && (
-            <a id="result-row" href={contact.linkedin[0]}>
-              <div id="indiv-result">LinkedIn: {contact.linkedin[1]}</div>
+            <a className="result-row" href={contact.linkedin[0]}>
+              <div className="indiv-result">LinkedIn: {contact.linkedin[1]}</div>
             </a>
           )}
         </div>
       )}
       {showResults && (allResults.length > 0 && searchCategory === 'Global') && (
-        <div id="search-results">
+        <div className="search-results">
           {allResults.map((result, index) => {
             if ('id' in result) {
               return (
-                <Link id="result-row" to={`/projects/${result.id}`} key={index}>
-                  <div id="indiv-result">
-                    <p id="result-name">
+                <Link className="result-row" to={`/projects/${result.id}`} key={index}>
+                  <div className="indiv-result">
+                    <p className="result-name">
                       {result.title.length > 25 ? `${result.title.substring(0, 25)}...` : result.title}
                     </p>
-                    <p id="result-page">
+                    <p className="result-page">
                       (Project Page)
                     </p>
                   </div>
@@ -302,12 +302,12 @@ const RenderSearch: React.FC = () => {
             // Check if the result is of type FrontPageHeader
             if ( 'text' in result) {
               return (
-                <Link id="result-row" to="/" key={index}>
-                  <div id="indiv-result">
-                    <p id="result-name">
+                <Link className="result-row" to="/" key={index}>
+                  <div className="indiv-result">
+                    <p className="result-name">
                       {result.title}
                     </p>
-                    <p id="result-page">
+                    <p className="result-page">
                       (Home)
                     </p>
                   </div>
@@ -317,12 +317,12 @@ const RenderSearch: React.FC = () => {
             // Check if the result is of type FrontPageParagraph
             if ( 'content' in result) {
               return (
-                <Link id="result-row" to="/" key={index}>
-                  <div id="indiv-result">
-                    <p id="result-name">
+                <Link className="result-row" to="/" key={index}>
+                  <div className="indiv-result">
+                    <p className="result-name">
                       {result.title.length > 25 ? `${result.title.substring(0, 25)}...` : result.title}
                     </p>
-                    <p id="result-page">
+                    <p className="result-page">
                       (Home)
                     </p>
                   </div>
@@ -332,12 +332,12 @@ const RenderSearch: React.FC = () => {
             // Check if the result is of type FrontPageContact
             if ( 'contactName' in result) {
               return (
-                <Link id="result-row" to="/" key={index}>
-                  <div id="indiv-result">
-                    <p id="result-name">
+                <Link className="result-row" to="/" key={index}>
+                  <div className="indiv-result">
+                    <p className="result-name">
                       Contact Me
                     </p>
-                    <p id="result-page">
+                    <p className="result-page">
                       (Home)
                     </p>
                   </div>
@@ -347,12 +347,12 @@ const RenderSearch: React.FC = () => {
             // Check if the result is of type About
             if ( 'name' in result) {
               return (
-                <Link id="result-row" to="/about" key={index}>
-                  <div id="indiv-result">
-                    <p id="result-name">
+                <Link className="result-row" to="/about" key={index}>
+                  <div className="indiv-result">
+                    <p className="result-name">
                       {result.name.length > 25 ? `${result.name.substring(0, 25)}...` : result.name}
                     </p>
-                    <p id="result-page">
+                    <p className="result-page">
                       (About)
                     </p>
                   </div>
@@ -362,12 +362,12 @@ const RenderSearch: React.FC = () => {
             // Check if the result is of type NewsItem
             if ('date' in result) {
               return (
-                <Link id="result-row" key={index} to="/about">
-                  <div id="indiv-result">
-                    <p id="result-name">
+                <Link className="result-row" key={index} to="/about">
+                  <div className="indiv-result">
+                    <p className="result-name">
                       {result.title.length > 25 ? `${result.title.substring(0, 25)}...` : result.title}
                     </p>
-                    <p id="result-page">
+                    <p className="result-page">
                       (About)
                     </p>
                   </div>
@@ -376,12 +376,12 @@ const RenderSearch: React.FC = () => {
             }
             if ('address' in result) {
               return (
-                <Link id="result-row" to='/contact'>
-                  <div id="indiv-result">
-                    <p id="result-name">
+                <Link className="result-row" to='/contact'>
+                  <div className="indiv-result">
+                    <p className="result-name">
                       Address: {contact.address[0]} 
                     </p>
-                    <p id="result-page">
+                    <p className="result-page">
                       (Contact)
                     </p>
                   </div>
@@ -390,8 +390,8 @@ const RenderSearch: React.FC = () => {
             }
             if ('phone' in result) {
               return (
-                <a id="result-row" href={`tel:${contact.phone[0]}`}>
-                  <div id="indiv-result">
+                <a className="result-row" href={`tel:${contact.phone[0]}`}>
+                  <div className="indiv-result">
                     Phone: {contact.phone[0]} 
                   </div> 
                 </a>
@@ -399,8 +399,8 @@ const RenderSearch: React.FC = () => {
             }
             if ('email' in result) {
               return (
-                <a id="result-row" href={`mailto:${contact.email[0]}`}>
-                  <div id="indiv-result">
+                <a className="result-row" href={`mailto:${contact.email[0]}`}>
+                  <div className="indiv-result">
                     Email: {contact.email[0]}
                   </div>
                 </a>
@@ -408,8 +408,8 @@ const RenderSearch: React.FC = () => {
             }
             if ('github' in result) {
               return (
-                <Link id="result-row" to={contact.github[0]}>
-                  <div id="indiv-result">
+                <Link className="result-row" to={contact.github[0]}>
+                  <div className="indiv-result">
                     GitHub: {contact.github[1]}
                   </div>
                 </Link>
@@ -417,8 +417,8 @@ const RenderSearch: React.FC = () => {
             }
             if ('url' in result) {
               return (
-                <Link id="result-row" to={contact.url[0]}>
-                  <div id="indiv-result">
+                <Link className="result-row" to={contact.url[0]}>
+                  <div className="indiv-result">
                     URL: {contact.url[1]}
                   </div>
                 </Link>
@@ -426,8 +426,8 @@ const RenderSearch: React.FC = () => {
             }
             if ('linkedin' in result) {
               return (
-                <Link id="result-row" to={contact.linkedin[0]}>
-                  <div id="indiv-result">
+                <Link className="result-row" to={contact.linkedin[0]}>
+                  <div className="indiv-result">
                     LinkedIn: {contact.linkedin[1]}
                   </div>
                 </Link>
