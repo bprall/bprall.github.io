@@ -10,7 +10,6 @@ This project has a tech stack that includes TypeScript (TSX), React, Node.js, Re
 - **Responsive Design:** Adaptive layout using CSS Grid, with an off-canvas navbar for mobile users.
 - **Global Search Functionality:** A versatile search bar that supports site-wide and page-specific searches.
 - **Content Management:** Easy updates to news, projects, personal details, and contact information via a JSON file.
-- **Firebase Integration:** Secure authentication for restricted content and source code access.
 
 ## Tech Stack
 
