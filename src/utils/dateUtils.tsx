@@ -13,9 +13,9 @@ const months: string[] = [
     'December'
 ];
 
-function padTo2Digits(num: number) {
-    return num.toString().padStart(2, '0');
-}
+const padTo2Digits = (num: number): string =>
+    num.toString().padStart(2, '0');
+
 
 export const getCurrentMonth = ():string => {
     return new Date().toLocaleString('default', { month: 'long' });

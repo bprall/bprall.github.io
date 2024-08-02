@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ChangeIcon } from '../utils/mouseEvents';
+import ChangeIcon from '../utils/mouseEvents';
 
-export default function TopBar() {
+const TopBar: React.FC = () => {
   return (
     <div className="top-bar">
       <div className="brand-container">
@@ -18,3 +18,5 @@ export default function TopBar() {
     </div>
   );
 }
+
+export default TopBar

@@ -23,7 +23,7 @@ const Layout: React.FC<{ children: ReactNode }> = ({ children }) => {
   );
 };
 
-function App() {
+const App: React.FC = () => {
   return (
     <Routes>
       <Route path="" element={<Layout><RenderFrontPage /></Layout>} />

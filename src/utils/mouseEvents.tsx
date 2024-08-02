@@ -1,8 +1,11 @@
-export function ChangeIcon(query:string, old:string, replace:string) {
-    const target = document.querySelector(query)
-
+const ChangeIcon = (query: string, old: string, replace: string): void => {
+    const target = document.querySelector(query);
+  
     if (target) {
-        target.classList.remove(old)
-        target.classList.add(replace)
+      target.classList.remove(old);
+      target.classList.add(replace);
     }
-}
+  };
+  
+
+export default ChangeIcon

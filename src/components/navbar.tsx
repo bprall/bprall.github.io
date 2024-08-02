@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { ChangeIcon } from '../utils/mouseEvents';
+import ChangeIcon from '../utils/mouseEvents';
 import { Dropdown, Offcanvas, Button } from 'react-bootstrap';
 import { Project } from '../utils/interfaces';
 
-function CapitalizeFirst(str: string): string {
-  return str.charAt(0).toUpperCase() + str.slice(1);
-}
+const  CapitalizeFirst = (str: string): string =>
+  str.charAt(0).toUpperCase() + str.slice(1);
 
-function RenderNavbar() {
+
+const RenderNavbar: React.FC = () => {
   const [cv, setCvLink] = useState('');
   const [projects, setProjects] = useState<Project[]>([]);
   const [showOffcanvas, setShowOffcanvas] = useState(false);

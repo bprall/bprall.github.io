@@ -1,6 +1,6 @@
 import {useEffect, useState} from 'react';
 import { Link } from 'react-router-dom';
-import { ChangeIcon } from '../utils/mouseEvents';
+import ChangeIcon from '../utils/mouseEvents';
 import { Contact } from '../utils/interfaces';
 
 const RenderContact: React.FC = () => {
@@ -28,7 +28,7 @@ const RenderContact: React.FC = () => {
   }, []);
 
   if (!contact) {
-    return <p>Loading...</p>;
+    return <div/>;
   }
 
   return (
